@@ -110,18 +110,15 @@ function useGaugePersonal() {
           lead="tight"
           class="text-muted-800 xs:!text-4xl mx-auto mb-4 max-w-2xl dark:text-white"
         >
-          The dashboard system that makes you say
-          <span
+          The Ultimate Playground for <span
             class="text-primary-500 font-hairline underline decoration-dotted underline-offset-4"
-          >wow</span>
+          >Designing</span> Clothes!
         </BaseHeading>
         <BaseParagraph
           size="lg"
           class="text-muted-500 dark:text-muted-100 mx-auto mb-4 max-w-2xl"
         >
-          Tairo is the ultimate solution for developers looking to build
-          beautiful Nuxt dashboards in no time, with the power of Shuriken UI
-          and Tailwind CSS.
+        Roppa is an application that helps you implement the most innovative idea into a cloth design.
         </BaseParagraph>
         <div class="flex items-center justify-center">
           <BaseButton
@@ -131,7 +128,7 @@ function useGaugePersonal() {
             shadow="hover"
             class="!h-12 w-44"
           >
-            Buy Tairo Now
+          Create design
           </BaseButton>
         </div>
       </div>

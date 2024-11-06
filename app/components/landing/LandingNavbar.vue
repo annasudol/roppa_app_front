@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import RoppaLogo from '../global/RoppaLogo.vue';
 
-const isSearchOpen = useState('search-open', () => false)
 const isMobileOpen = ref(false)
 
 </script>
@@ -32,18 +31,20 @@ const isMobileOpen = ref(false)
             : 'hidden',
         ]"
       >
-        <NuxtLink
-          to="/demos"
-          class="inline-flex items-center justify-center px-6"
+        <BaseLink
+          to="/new"
+          class="inline-flex items-center justify-center px-4"
         >
-          Prebuilt pages
-        </NuxtLink>
-        <NuxtLink
-          to="/documentation"
-          class="inline-flex items-center justify-center px-6"
+        <Icon name="ant-design:plus-circle-outlined" class="mr-1 h-4 w-4" />
+
+          New Design
+        </BaseLink>
+        <BaseLink
+          to="/"
+          class="inline-flex items-center justify-center px-4"
         >
-          Documentation
-        </NuxtLink>
+        How it Works
+        </BaseLink>
       </div>
       <div class="flex w-1/2 items-center justify-end gap-4 md:w-1/5">
         <BaseThemeToggle aria-label="Toggle darkmode" />
@@ -52,8 +53,10 @@ const isMobileOpen = ref(false)
           color="primary"
           to="/auth/signin"
           class="ltablet:!flex !hidden lg:!flex"
-        >
+        >        
           Sign in
+          <Icon name="ant-design:login-outlined" class="ms-1 h-4 w-4" />
+
         </BaseButton>
         <button
           type="button"
