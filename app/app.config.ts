@@ -667,8 +667,8 @@ export default defineAppConfig({
           },
         },
         copyright: {
-          name: 'Css Ninja',
-          to: 'https://cssninja.io',
+          name: 'Roppa',
+          to: 'https://roppa.io',
           since: '2018',
         },
         links: [
