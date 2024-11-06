@@ -747,6 +747,7 @@ export default defineAppConfig({
   },
   meta: {
     description: '',
-    
-  }
+
+  },
+  nui: {},
 })

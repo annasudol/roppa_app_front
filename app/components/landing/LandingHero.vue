@@ -79,12 +79,9 @@ function useGaugePersonal() {
     series,
   }
 }
-
-
 </script>
 
 <template>
-  <LandingLayout>
   <div
     class="dark:to-muted-900 relative min-h-screen overflow-hidden bg-gradient-to-b from-transparent to-white"
   >
@@ -385,7 +382,6 @@ function useGaugePersonal() {
       <LandingHeroMockup />
     </div>
   </div>
-</LandingLayout>
 </template>
 
 <style scoped>
