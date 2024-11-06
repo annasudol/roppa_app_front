@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "dev": "nuxi dev",
+    "dev": "nuxi dev --open",
     "build": "nuxi build",
     "preview": "nuxt preview",
     "db:generate": "drizzle-kit generate",

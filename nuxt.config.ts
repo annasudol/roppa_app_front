@@ -3,7 +3,9 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   extends: ['@shuriken-ui/nuxt'],
-
+  css: [
+    '../assets/css/colors.css'
+  ],
   modules: [
     '@nuxthub/core',
     '@nuxt/ui',
