@@ -1,17 +1,17 @@
 // import exposeColors from './tailwind/plugin-expose-colors'
 
 export default defineNuxtConfig({
+  devtools: { enabled: true },
+
   modules: [
     '@nuxthub/core',
     '@nuxt/ui',
     'nuxt-auth-utils',
     '@nuxt/eslint',
     '@pinia/nuxt',
-    '@pinia/colada-nuxt'
+    '@pinia/colada-nuxt',
+    'nuxt-swiper'
   ],
-  devtools: {
-    enabled: true
-  },
   future: { compatibilityVersion: 4 },
   compatibilityDate: '2024-07-30',
   hub: {

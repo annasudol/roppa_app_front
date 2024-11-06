@@ -1,136 +1,85 @@
 <script setup lang="ts">
-import type { DropdownItem } from '#ui/types'
+const route = useRoute()
+const app = useAppConfig()
 
-const { loggedIn, user, clear } = useUserSession()
-const colorMode = useColorMode()
-
-watch(loggedIn, () => {
-  if (!loggedIn.value) {
-    navigateTo('/')
-  }
-})
-
-function toggleColorMode() {
-  colorMode.preference = colorMode.preference === 'dark' ? 'light' : 'dark'
-}
-
+/**
+ * Global head configuration
+ * @see https://nuxt.com/docs/getting-started/seo-meta
+ */
 useHead({
-  htmlAttrs: { lang: 'en' },
-  link: [{ rel: 'icon', href: '/icon.png' }]
-})
-
-useSeoMeta({
-  viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
-  title: 'Atidone',
-  description:
-    'A Nuxt demo hosted with edge-side rendering, authentication and queyring a Cloudflare D1 database',
-  ogImage: '/social-image.png',
-  twitterImage: '/social-image.png',
-  twitterCard: 'summary_large_image'
-})
-
-const items = [
-  [
+  title: () => route.meta?.title ?? '',
+  titleTemplate: (titleChunk) => {
+    return titleChunk
+      ? `${titleChunk} - ${app.roppa?.title}`
+      : `${app.roppa?.title}`
+  },
+  htmlAttrs: {
+    lang: 'en',
+    dir: 'ltr',
+  },
+  link: [
     {
-      label: 'Logout',
-      icon: 'i-heroicons-arrow-left-on-rectangle',
-      click: clear
+      rel: 'icon',
+      type: 'image/png',
+      href: '/img/favicon.png',
+    },
+  ],
+
+  meta: [
+    {
+      name: 'description',
+      content: 'The most advanced Nuxt and Tailwind CSS dashboard template',
+    },
+    {
+      name: 'twitter:card',
+      content: 'summary_large_image',
+    },
+    {
+      name: 'twitter:site',
+      content: '@cssninjaStudio',
+    },
+    {
+      name: 'og:image:type',
+      content: 'image/png',
+    },
+    {
+      name: 'og:image:width',
+      content: '1200',
+    },
+    {
+      name: 'og:image:height',
+      content: '630',
+    },
+    {
+      name: 'og:image',
+      content: 'https://media.cssninja.io/embed/marketplace/product/wide.png'
     }
-  ]
-] satisfies DropdownItem[][]
+  ],
+})
 </script>
 
 <template>
-  <UContainer class="min-h-screen flex flex-col my-4">
-    <div class="mb-2 text-right">
-      <UButton
-        square
-        variant="ghost"
-        color="black"
-        :icon="$colorMode.preference === 'dark' ? 'i-heroicons-moon' : 'i-heroicons-sun'"
-        @click="toggleColorMode"
-      />
-    </div>
+  <div>
+    <!--
+      Global app search modal
+      @see .demo/components/DemoAppSearch.vue
+    -->
+    <DemoAppSearch />
+    <!--
+      Global app layout switcher
+      @see .demo/components/DemoAppLayoutSwitcher.vue
+    -->
+    <DemoAppLayoutSwitcher />
 
-    <UCard>
-      <template #header>
-        <h3 class="text-lg font-semibold leading-6">
-          <NuxtLink to="/">
-            Atidone
-          </NuxtLink>
-        </h3>
-        <UButton
-          v-if="!loggedIn"
-          to="/api/auth/github"
-          icon="i-simple-icons-github"
-          label="Login with GitHub"
-          color="black"
-          size="xs"
-          external
-        />
-        <div
-          v-else
-          class="flex flex-wrap -mx-2 sm:mx-0"
-        >
-          <UButton
-            to="/todos"
-            icon="i-heroicons-list-bullet"
-            label="Todos"
-            :color="$route.path === '/todos' ? 'primary' : 'gray'"
-            variant="ghost"
-          />
-          <UButton
-            to="/optimistic-todos"
-            icon="i-heroicons-sparkles"
-            label="Optimistic Todos"
-            :color="$route.path === '/optimistic-todos' ? 'primary' : 'gray'"
-            variant="ghost"
-          />
-          <UDropdown
-            v-if="user"
-            :items="items"
-          >
-            <UButton
-              color="gray"
-              variant="ghost"
-              trailing-icon="i-heroicons-chevron-down-20-solid"
-            >
-              <UAvatar
-                :src="`https://github.com/${user.login}.png`"
-                :alt="user.login"
-                size="3xs"
-              />
-              {{ user.login }}
-            </UButton>
-          </UDropdown>
-        </div>
-      </template>
+    <!--
+      Vue Axe Popup
+      @see .demo/plugins/vue-axe.client.ts
+    -->
+    <VueAxePopup />
+
+    <NuxtLayout>
+      <NuxtLoadingIndicator color="rgb(var(--color-primary-500))" />
       <NuxtPage />
-    </UCard>
-
-    <footer class="text-center mt-2">
-      <NuxtLink
-        href="https://github.com/atinux/atidone"
-        target="_blank"
-        class="text-sm text-gray-500 hover:text-gray-700"
-      >
-        GitHub
-      </NuxtLink>
-      ·
-      <NuxtLink
-        href="https://twitter.com/atinux"
-        target="_blank"
-        class="text-sm text-gray-500 hover:text-gray-700"
-      >
-        Twitter
-      </NuxtLink>
-    </footer>
-  </UContainer>
-  <UNotifications />
+    </NuxtLayout>
+  </div>
 </template>
-
-<style lang="postcss">
-body {
-  @apply font-sans text-gray-950 bg-gray-50 dark:bg-gray-950 dark:text-gray-50;
-}
-</style>
