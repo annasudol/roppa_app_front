@@ -13,7 +13,7 @@ const props = withDefaults(
     display: 'expanded-lg',
   },
 )
-const config = useAppConfig().tairo.iconnav?.footer
+const config = useAppConfig().roppa.iconnav?.footer
 const year = new Date().getFullYear()
 </script>
 
