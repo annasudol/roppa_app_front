@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@fontsource/fira-code':
+        specifier: ^5.1.0
+        version: 5.1.0
       '@iconify-json/simple-icons':
         specifier: ^1.2.11
         version: 1.2.11
@@ -54,6 +57,21 @@ importers:
         specifier: ^3.23.8
         version: 3.23.8
     devDependencies:
+      '@cssninja/nuxt-toaster':
+        specifier: ^0.3.12
+        version: 0.3.12(magicast@0.3.5)(rollup@4.24.4)(vue@3.5.12(typescript@5.4.5))(webpack-sources@3.2.3)
+      '@fontsource-variable/fira-code':
+        specifier: ^5.0.16
+        version: 5.1.0
+      '@fontsource-variable/inter':
+        specifier: ^5.0.16
+        version: 5.1.0
+      '@fontsource-variable/karla':
+        specifier: ^5.0.19
+        version: 5.1.0
+      '@fontsource-variable/roboto-flex':
+        specifier: ^5.0.8
+        version: 5.1.0
       '@nuxt/devtools':
         specifier: ^1.6.0
         version: 1.6.0(rollup@4.24.4)(vite@5.4.10(@types/node@22.1.0)(terser@5.31.4))(vue@3.5.12(typescript@5.4.5))(webpack-sources@3.2.3)
@@ -332,6 +350,9 @@ packages:
   '@cspotcode/source-map-support@0.8.1':
     resolution: {integrity: sha512-IchNf6dN4tHoMFIn/7OE8LWZ19Y6q/67Bmf6vnGREv8RSbBVb9LPJxEcnwrcwX6ixSvaiGoomAUvu4YSxXrVgw==}
     engines: {node: '>=12'}
+
+  '@cssninja/nuxt-toaster@0.3.12':
+    resolution: {integrity: sha512-k6yE/e9/Na4XJBC1dNjUctOvKpjWywnw1gEmAIbryn0cITmOMwiJckqC7QEXGxY8Pr2OhLFVYGQurAncf4pp0A==}
 
   '@csstools/selector-resolve-nested@3.0.0':
     resolution: {integrity: sha512-ZoK24Yku6VJU1gS79a5PFmC8yn3wIapiKmPgun0hZgEI5AOqgH2kiPRsPz1qkGv4HL+wuDLH83yQyk6inMYrJQ==}
@@ -1113,6 +1134,21 @@ packages:
 
   '@floating-ui/vue@1.1.5':
     resolution: {integrity: sha512-ynL1p5Z+woPVSwgMGqeDrx6HrJfGIDzFyESFkyqJKilGW1+h/8yVY29Khn0LaU6wHBRwZ13ntG6reiHWK6jyzw==}
+
+  '@fontsource-variable/fira-code@5.1.0':
+    resolution: {integrity: sha512-fwJbJLvyZ2BhgBSPYCNsrQ6IFQTpRu9GWXY8N20wHTpbhV0Ro5QJihiZV060Ay3kVR6IVH/oSVe/cr7Ube28gg==}
+
+  '@fontsource-variable/inter@5.1.0':
+    resolution: {integrity: sha512-Wj2dUGP0vUpxRGQTXQTCNJO+aLcFcQm+gUPXfj/aS877bQkEPBPv9JvZJpwdm2vzelt8NTZ+ausKlBCJjh2XIg==}
+
+  '@fontsource-variable/karla@5.1.0':
+    resolution: {integrity: sha512-YRmNh8L3wYO+iQhaCjt4aL3RmlGtEcxjGZQs3rAzFodJfDangKZg7jRRc4wWjlc8f9n/JSQdr9+iQ3f91stiTw==}
+
+  '@fontsource-variable/roboto-flex@5.1.0':
+    resolution: {integrity: sha512-TwH8+uOwBqIjxtvTc+kp7ywyH7V7bDLbAXrEQg2SoCTJ6m2pn00x7ULioTTzDEvek+XpbqIf8gbKE1zlcONNGg==}
+
+  '@fontsource/fira-code@5.1.0':
+    resolution: {integrity: sha512-ti2XDP0qthaTDu44QawNP3PjEZIZ/cNl5VUZzvF9oYS/WY4LgmbF43IMTgTUZL33hknwFWBfmLmZCheOQmzJDg==}
 
   '@headlessui-float/vue@0.13.3':
     resolution: {integrity: sha512-B8x3uhe5HB6z2IfKWGQMo2mqoNGSLiG+O3rqpXSL1oyBqfInafVqXXgBbKhCDxUQ/ExJvPHjePdjAh5GujXwWA==}
@@ -6104,6 +6140,19 @@ snapshots:
     dependencies:
       '@jridgewell/trace-mapping': 0.3.9
 
+  '@cssninja/nuxt-toaster@0.3.12(magicast@0.3.5)(rollup@4.24.4)(vue@3.5.12(typescript@5.4.5))(webpack-sources@3.2.3)':
+    dependencies:
+      '@nuxt/kit': 3.14.0(magicast@0.3.5)(rollup@4.24.4)(webpack-sources@3.2.3)
+      '@vueuse/core': 10.11.1(vue@3.5.12(typescript@5.4.5))
+      defu: 6.1.4
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - magicast
+      - rollup
+      - supports-color
+      - vue
+      - webpack-sources
+
   '@csstools/selector-resolve-nested@3.0.0(postcss-selector-parser@7.0.0)':
     dependencies:
       postcss-selector-parser: 7.0.0
@@ -6568,6 +6617,16 @@ snapshots:
     transitivePeerDependencies:
       - '@vue/composition-api'
       - vue
+
+  '@fontsource-variable/fira-code@5.1.0': {}
+
+  '@fontsource-variable/inter@5.1.0': {}
+
+  '@fontsource-variable/karla@5.1.0': {}
+
+  '@fontsource-variable/roboto-flex@5.1.0': {}
+
+  '@fontsource/fira-code@5.1.0': {}
 
   '@headlessui-float/vue@0.13.3(@headlessui/vue@1.7.23(vue@3.5.12(typescript@5.4.5)))(vue@3.5.12(typescript@5.4.5))':
     dependencies:

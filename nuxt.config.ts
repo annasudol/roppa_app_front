@@ -4,7 +4,9 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   extends: ['@shuriken-ui/nuxt'],
   css: [
-    '../assets/css/colors.css'
+    '../assets/css/colors.css',
+    '@fontsource-variable/inter/index.css',
+    '@fontsource-variable/karla/index.css',
   ],
   modules: [
     '@nuxthub/core',
@@ -13,7 +15,8 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     '@pinia/nuxt',
     '@pinia/colada-nuxt',
-    'nuxt-swiper'
+    'nuxt-swiper',
+    '@cssninja/nuxt-toaster'
   ],
   future: { compatibilityVersion: 4 },
   compatibilityDate: '2024-07-30',
