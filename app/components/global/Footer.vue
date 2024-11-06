@@ -82,7 +82,7 @@ const year = new Date().getFullYear()
           >
             {{ config.copyright.name }}
           </NuxtLink>
-          <span v-if="config?.copyright?.since">{{ config.copyright.since }}-{{ year }}.</span>
+          <span v-if="config?.copyright?.since">{{ year }}.</span>
         </span>
       </div>
     </div>
