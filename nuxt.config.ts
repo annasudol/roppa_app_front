@@ -1,3 +1,5 @@
+// import exposeColors from './tailwind/plugin-expose-colors'
+
 export default defineNuxtConfig({
   modules: [
     '@nuxthub/core',
