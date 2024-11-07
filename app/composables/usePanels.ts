@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { defu } from 'defu'
 
 interface Panel {
@@ -54,8 +55,8 @@ export function usePanels() {
         ...panel,
         size: (panel as any).size ?? 'sm',
         position: (panel as any).position ?? 'left',
-        overlay: (panel as any).overlay ?? true,
-      })) ?? [],
+        overlay: (panel as any).overlay ?? true
+      })) ?? []
   )
 
   const currentName = useState('panels-current-name', () => '')
@@ -97,6 +98,6 @@ export function usePanels() {
     currentProps,
     showOverlay,
     open,
-    close,
+    close
   }
 }

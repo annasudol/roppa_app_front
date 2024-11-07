@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { useNinjaWindowScroll } from '~/hooks/useScroll'
-import { useTailwindColors } from '~/hooks/useTailwindColors'
+import { useNinjaWindowScroll } from '~/composables/useScroll'
+import { useTailwindColors } from '~/composables/useTailwindColors'
 
 const { y } = useNinjaWindowScroll()
 

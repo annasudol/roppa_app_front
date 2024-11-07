@@ -6,24 +6,16 @@ const props = withDefaults(
     topnav?: boolean
     toolbar?: boolean
     circularMenu?: boolean
-    display?:
-      | 'condensed'
-      | 'horizontal-scroll'
-      | 'expanded-sm'
-      | 'expanded-md'
-      | 'expanded-lg'
-      | 'expanded-xl'
   }>(),
   {
     topnav: true,
     toolbar: true,
-    circularMenu: true,
-    display: 'expanded-lg',
-  },
+    circularMenu: true
+  }
 )
 
 const route = useRoute()
-const config = useAppConfig().tairo?.topnav
+const config = useAppConfig().roppa?.topnav
 const { isMobileOpen } = useTopnav()
 
 const topnavEnabled = computed(() => {
@@ -37,21 +29,15 @@ const circularMenuEnabled = computed(() => {
 })
 
 const mainClass = computed(() => {
-  if (props.display === 'condensed') {
-    return 'bg-muted-50 dark:bg-muted-900 relative min-h-screen w-full overflow-x-hidden'
-  }
 
   if (!topnavEnabled.value) {
     return 'bg-muted-50 dark:bg-muted-900 relative min-h-screen w-full overflow-x-hidden px-4 transition-all duration-300 xl:px-10'
   }
 
   const list = [
-    'bg-muted-50 dark:bg-muted-900 relative min-h-screen w-full overflow-x-hidden px-4 transition-all duration-300 xl:px-10',
+    'bg-muted-50 dark:bg-muted-900 relative min-h-screen w-full overflow-x-hidden px-4 transition-all duration-300 xl:px-10'
   ]
 
-  if (props.display === 'horizontal-scroll') {
-    list.push('!pe-0 xl:!pe-0')
-  }
 
   return list
 })
@@ -63,14 +49,16 @@ const mainClass = computed(() => {
       <slot name="navigation">
         <TairoTopnavNavigation
           v-if="topnavEnabled"
-          :display="props.display"
           position="fixed"
         >
           <div
             v-if="config?.navigation?.logo?.component"
             class="flex h-16 w-full items-center gap-x-4"
           >
-            <NuxtLink to="/" class="flex items-center justify-center">
+            <NuxtLink
+              to="/"
+              class="flex items-center justify-center"
+            >
               <component
                 :is="
                   resolveComponentOrNative(config?.navigation.logo.component)
@@ -93,12 +81,17 @@ const mainClass = computed(() => {
               :is="
                 resolveComponentOrNative(config?.navigation?.header?.component)
               "
-              v-if="config?.navigation?.header?.component"
               v-bind="config?.navigation?.header?.props"
             />
             <div class="flex items-center justify-center md:hidden">
-              <button type="button" @click="isMobileOpen = true">
-                <Icon name="lucide:menu" class="text-muted-400 size-6" />
+              <button
+                type="button"
+                @click="isMobileOpen = true"
+              >
+                <Icon
+                  name="lucide:menu"
+                  class="text-muted-400 size-6"
+                />
               </button>
             </div>
           </div>
@@ -122,15 +115,6 @@ const mainClass = computed(() => {
       <div :class="mainClass">
         <div
           class="pt-40 md:pt-36"
-          :class="[
-            props.display === 'condensed' && 'w-full',
-            props.display === 'horizontal-scroll' &&
-              'mx-auto w-full overflow-x-auto',
-            props.display === 'expanded-sm' && 'mx-auto w-full max-w-5xl',
-            props.display === 'expanded-md' && 'mx-auto w-full max-w-6xl',
-            props.display === 'expanded-lg' && 'mx-auto w-full max-w-7xl',
-            props.display === 'expanded-xl' && 'mx-auto w-full',
-          ]"
         >
           <slot />
         </div>
@@ -141,9 +125,6 @@ const mainClass = computed(() => {
       <TairoTopnavCircularMenu v-if="circularMenuEnabled" />
     </div>
 
-    <TairoTopnavFooter
-      v-if="config?.footer?.enabled"
-      :display="props.display"
-    />
+    <TairoTopnavFooter />
   </div>
 </template>
