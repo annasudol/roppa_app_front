@@ -1,3 +1,4 @@
+<!-- eslint-disable @typescript-eslint/no-explicit-any -->
 <script setup lang="ts">
 import { toTypedSchema } from '@vee-validate/zod'
 import { Field, useForm } from 'vee-validate'
@@ -8,7 +9,7 @@ definePageMeta({
   layout: 'empty',
   title: 'Login',
   preview: {
-    title: 'Login 4',
+    title: 'Sign in',
     description: 'For authentication and sign in',
     categories: ['layouts', 'authentication'],
     src: '/img/screens/auth-login-4.png',
@@ -88,13 +89,13 @@ const onSubmit = handleSubmit(async (values) => {
   }
   catch (error: any) {
     // this will set the error on the form
-    if (error.message === 'Fake backend validation error') {
+    if (error?.message === 'Fake backend validation error') {
       setFieldError('password', 'Invalid credentials (use "password")')
     }
     return
   }
 
-  router.push('/dashboards')
+  router.push('/dashboard')
 })
 </script>
 

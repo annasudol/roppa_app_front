@@ -1,15 +1,139 @@
 <template>
- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1524.6 500">
-  <path transform="translate(0)" d="m0 0h2048v758h-2048z" fill="none"/>
-<path transform="translate(1356,268)" d="m0 0h11l23 3 19 5 17 7 18 10 14 10 10 9 10 10 13 18 8 14 6 13 6 18 4 20 1 8v25l-4 24-4 15-8 18-7 13-9 13-9 11-12 12-16 12-16 9-15 7-15 5-20 4-7 1h-26l-16-2-20-5-18-7-13-7-1 65-2 10-3 8-7 9-11 7-6 2h-19l-10-4-10-9-4-5-5-12-1-6v-204l2-22 6-24 9-22 13-21 14-16 11-11 13-10 15-9 17-8 15-5 18-4z" fill="#0D179B"/>
-<path transform="translate(997,268)" d="m0 0h10l24 3 18 5 16 6 20 11 9 7 8 6 18 18 11 15 9 16 5 11 5 13 5 23 2 19-1 22-4 22-6 18-10 21-10 15-8 10-10 11-11 9-13 9-10 6-20 9-20 6-20 3h-26l-15-2-17-4-17-6-18-9v60l-2 14-4 10-9 10-8 5-6 2h-20l-12-6-8-7-6-10-3-9v-217l3-20 6-21 7-17 11-18 7-9 8-10 10-10 17-13 19-11 14-6 17-5 21-4z" fill="#0D179B"/>
-<path transform="translate(1705,268)" d="m0 0h15l21 3 20 5 15 6 15 8 16 11 10 9 17 17 12 18 8 14 7 16 7 15 11 24 12 26 11 24 13 28 13 29 5 15v9l-4 13-4 6-4 5-10 7-9 3h-16l-10-4-9-6-7-10-8-15-11-25-1-2h-2l-11 14-13 13-9 7-15 10-15 8-23 8-20 4-9 1h-27l-22-4-17-5-16-7-19-11-10-8-13-12-11-12-7-10-6-10-8-16-6-15-5-22-2-26 2-22 3-16 7-21 8-16 9-15 14-17 9-9 14-11 15-9 21-10 16-5 14-3z" fill="#0D179B"/>
-<path transform="translate(637,268)" d="m0 0h11l23 3 19 5 21 9 16 9 17 13 15 15 11 15 8 13 9 19 6 20 3 15 1 11v21l-3 21-6 21-5 13-8 15-11 16-12 14-12 11-14 10-14 8-13 6-17 6-21 4-6 1h-29l-19-3-20-6-21-9-14-9-9-7-11-9-7-7-9-11-7-10-9-15-7-16-6-20-3-16-1-25 2-18 4-19 6-17 11-21 7-11 9-11 17-17 17-12 14-8 11-5 13-5 21-5z" fill="#0D179B"/>
-<path transform="translate(328,268)" d="m0 0h12l23 3 21 6 13 5 17 9 14 10 13 11 6 8 5 10 1 4v15l-5 12-6 8-10 7-8 3h-16l-9-3-9-5-9-8-11-7-11-5-9-3-18-2-18 2-17 6-11 7-10 9h-2l-2 4-8 11-5 11-4 13-1 8-1 125-2 11-5 10-10 10-11 5-5 1h-10l-11-3-8-5-6-5-6-9-3-10v-137l3-19 5-18 9-21 10-16 7-9 9-11 13-12 15-11 14-8 19-8 17-5 17-3z" fill="#0D179B"/>
-<path transform="translate(629,346)" d="m0 0h22l16 4 10 4 12 8 10 9 9 12 7 15 3 10 1 8v17l-2 12-5 15-5 8-9 12-11 10-10 6-12 5-13 3h-24l-19-5-10-6-10-7-8-7-10-14-6-13-3-11-1-7v-20l4-16 8-16 9-11 7-7 10-7 15-7 9-3z" fill="#FEFEFE"/>
-<path transform="translate(1701,346)" d="m0 0h18l12 2 14 5 14 9 10 9 6 7 8 13 5 14 2 9v20l-2 12-5 13-8 14-8 9-8 7-11 7-12 5-10 3-10 1h-13l-11-2-6-2-10-4-9-5-11-9-10-11-8-15-5-16-1-8v-16l2-12 6-16 7-11 9-10 8-7 10-6 13-6z" fill="#FEFEFE"/>
-<path transform="translate(991,346)" d="m0 0h16l16 3 10 4 11 6 11 9 8 9 8 13 4 11 3 11 1 8v12l-4 20-8 16-8 11-9 9-16 10-14 5-14 2h-12l-13-2-15-5-11-6-12-11-8-8-9-16-4-13-2-17 1-12 4-16 8-16 7-9 11-11 13-8 17-7z" fill="#FEFEFE"/>
-<path transform="translate(1350,346)" d="m0 0h16l16 3 12 5 11 6 12 11 7 8 9 16 4 14 1 7v20l-4 17-8 16-9 12-13 11-16 8-13 4-10 1h-11l-14-2-12-4-13-7-10-8-8-8-6-9-7-14-3-11-1-8v-16l3-15 8-18 10-13 7-7 10-7 19-9z" fill="#FEFEFE"/>
-
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    class="shrink-0"
+    viewBox="0 0 1524.6 500"
+  >
+    <defs>
+      <path
+        id="a"
+        d="M180.5 391.1c-53-2.4-77.4-18-77.4-74.2V191.3h79.5V88.2h-79.5V1.7H0V321c0 119.2 69.5 168.6 180.5 168.8h2.1v-98.7h-2.1z"
+      />
+    </defs>
+    <use
+      xlink:href="#a"
+      fill="currentColor"
+      fill-rule="evenodd"
+      class="overflow-visible"
+      clip-rule="evenodd"
+    />
+    <clipPath id="b"><use
+      xlink:href="#a"
+      class="overflow-visible"
+    /></clipPath>
+    <path
+      fill="currentColor"
+      d="M0 1.7h182.6v488.1H0z"
+      clip-path="url(#b)"
+    />
+    <defs>
+      <path
+        id="c"
+        d="M409.2 181.2c59.6 0 107.8 48.3 107.8 107.8 0 59.6-48.3 107.8-107.8 107.8-59.6 0-107.8-48.3-107.8-107.8s48.3-107.8 107.8-107.8m206.7-93h-98.5v43C486.2 98.3 443.2 79.6 394 79.6c-104.7 0-197.2 90.6-197.2 210.2 0 118.8 92.5 209.4 197.2 209.4 49.2 0 92.2-18.8 123.5-51.6v43H616V88.2z"
+      />
+    </defs>
+    <use
+      xlink:href="#c"
+      fill="currentColor"
+      fill-rule="evenodd"
+      class="overflow-visible"
+      clip-rule="evenodd"
+    />
+    <clipPath id="d"><use
+      xlink:href="#c"
+      class="overflow-visible"
+    /></clipPath>
+    <path
+      fill="currentColor"
+      d="M196.8 79.6H616v419.7H196.8z"
+      clip-path="url(#d)"
+    />
+    <defs><path
+      id="e"
+      d="M674.2 88.2h103.2v402.5H674.2z"
+    /></defs>
+    <use
+      xlink:href="#e"
+      fill="currentColor"
+      fill-rule="evenodd"
+      class="overflow-visible"
+      clip-rule="evenodd"
+    />
+    <clipPath id="f"><use
+      xlink:href="#e"
+      class="overflow-visible"
+    /></clipPath>
+    <path
+      fill="currentColor"
+      d="M674.2 88.2h103.2v402.5H674.2z"
+      clip-path="url(#f)"
+    />
+    <defs>
+      <path
+        id="g"
+        d="M1047.4 80.4C913.8 64 834.8 143.7 834.8 257.8v232.9H938V257.8c0-57 43.8-92.2 109.4-80.5V80.4z"
+      />
+    </defs>
+    <use
+      xlink:href="#g"
+      fill="currentColor"
+      fill-rule="evenodd"
+      class="overflow-visible"
+      clip-rule="evenodd"
+    />
+    <clipPath id="h"><use
+      xlink:href="#g"
+      class="overflow-visible"
+    /></clipPath>
+    <path
+      fill="currentColor"
+      d="M834.8 63.9h212.6v426.7H834.8z"
+      clip-path="url(#h)"
+    />
+    <defs>
+      <path
+        id="i"
+        d="M1270.4 181.2c59.6 0 107.8 48.3 107.8 107.8 0 59.6-48.3 107.8-107.8 107.8-59.6 0-107.8-48.3-107.8-107.8-.1-59.5 48.2-107.8 107.8-107.8m0-103.2c-116.5 0-211 94.5-211 211s94.5 211 211 211 211-94.5 211-211c0-25.2-4.4-49.5-12.6-71.9-5.2-14.4-16.9-24.2-32-26.9-45.1-7.9-82-39.7-97.1-81.9-5.2-14.5-16.8-24.3-31.9-27-12.1-2.1-24.6-3.3-37.4-3.3z"
+      />
+    </defs>
+    <use
+      xlink:href="#i"
+      fill="currentColor"
+      fill-rule="evenodd"
+      class="overflow-visible"
+      clip-rule="evenodd"
+    />
+    <clipPath id="j"><use
+      xlink:href="#i"
+      class="overflow-visible"
+    /></clipPath>
+    <path
+      fill="currentColor"
+      d="M1059.4 78h422v422h-422z"
+      clip-path="url(#j)"
+    />
+    <defs>
+      <path
+        id="k"
+        d="M1458.8 0c36.3 0 65.8 29.5 65.8 65.8s-29.5 65.8-65.8 65.8-65.8-29.5-65.8-65.8S1422.4 0 1458.8 0"
+      />
+    </defs>
+    <use
+      xlink:href="#k"
+      fill="currentColor"
+      fill-rule="evenodd"
+      class="overflow-visible"
+      clip-rule="evenodd"
+    />
+    <clipPath id="l"><use
+      xlink:href="#k"
+      class="overflow-visible"
+    /></clipPath>
+    <path
+      fill="currentColor"
+      d="M1393 0h131.6v131.6H1393z"
+      clip-path="url(#l)"
+    />
   </svg>
 </template>

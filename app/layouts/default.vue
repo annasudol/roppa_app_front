@@ -15,5 +15,4 @@ const { y } = useNinjaWindowScroll()
     <RoppaPanels />
     <LandingFooter />
   </div>
-  <!-- <RoppaIconnavFooter /> -->
 </template>

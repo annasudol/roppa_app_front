@@ -9,7 +9,7 @@ definePageMeta({
   layout: 'empty',
   title: 'Signup',
   preview: {
-    title: 'Signup 3',
+    title: 'Signup',
     description: 'For authentication and sign up',
     categories: ['layouts', 'authentication'],
     src: '/img/screens/auth-signup-3.png',
