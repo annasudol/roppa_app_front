@@ -2,7 +2,7 @@
 import { toTypedSchema } from '@vee-validate/zod'
 import { Field, useForm } from 'vee-validate'
 import { z } from 'zod'
-import { useToaster } from '~/composables/toaster';
+import { useToaster } from '~/composables/toaster'
 
 definePageMeta({
   layout: 'empty',
@@ -238,7 +238,10 @@ const onSubmit = handleSubmit(async (values) => {
             class="border-muted-200 dark:border-muted-700 my-6 w-full border-t"
           >
 
-          <BaseButton class="!h-11 w-full">
+          <BaseButton
+            class="!h-11 w-full"
+            to="/api/auth/google"
+          >
             <Icon
               name="logos:google-icon"
               class="me-1 size-4"
