@@ -241,6 +241,7 @@ const onSubmit = handleSubmit(async (values) => {
           <BaseButton
             class="!h-11 w-full"
             to="/api/auth/google"
+            external
           >
             <Icon
               name="logos:google-icon"
@@ -248,7 +249,6 @@ const onSubmit = handleSubmit(async (values) => {
             />
             <span>Sign In with Google</span>
           </BaseButton>
-
           <!-- No account link -->
           <p
             class="text-muted-400 mt-4 flex justify-between font-sans text-xs leading-5"

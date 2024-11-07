@@ -352,7 +352,8 @@ const onSubmit = handleSubmit(async (values) => {
               <!-- Social signup -->
               <BaseButton
                 class="!h-11 w-full"
-                to="/api/auth/github"
+                to="/api/auth/google"
+                external
               >
                 <Icon
                   name="logos:google-icon"
