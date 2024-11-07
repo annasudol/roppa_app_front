@@ -15,46 +15,46 @@ useHead({
   },
   htmlAttrs: {
     lang: 'en',
-    dir: 'ltr',
+    dir: 'ltr'
   },
   link: [
     {
       rel: 'icon',
       type: 'image/png',
-      href: '/img/favicon.png',
-    },
+      href: '/img/favicon.png'
+    }
   ],
 
   meta: [
     {
       name: 'description',
-      content: 'The most advanced Nuxt and Tailwind CSS dashboard template',
+      content: 'The most advanced Nuxt and Tailwind CSS dashboard template'
     },
     {
       name: 'twitter:card',
-      content: 'summary_large_image',
+      content: 'summary_large_image'
     },
     {
       name: 'twitter:site',
-      content: '@cssninjaStudio',
+      content: '@cssninjaStudio'
     },
     {
       name: 'og:image:type',
-      content: 'image/png',
+      content: 'image/png'
     },
     {
       name: 'og:image:width',
-      content: '1200',
+      content: '1200'
     },
     {
       name: 'og:image:height',
-      content: '630',
+      content: '630'
     },
     {
       name: 'og:image',
       content: 'https://media.cssninja.io/embed/marketplace/product/wide.png'
     }
-  ],
+  ]
 })
 </script>
 
@@ -77,9 +77,7 @@ useHead({
     -->
     <VueAxePopup />
 
-    <NuxtLayout>
-      <NuxtLoadingIndicator color="rgb(var(--color-primary-500))" />
-      <NuxtPage />
-    </NuxtLayout>
+    <NuxtLoadingIndicator color="rgb(var(--color-primary-500))" />
+    <NuxtPage />
   </div>
 </template>

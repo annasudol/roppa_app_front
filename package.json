@@ -50,7 +50,11 @@
     "typescript": "5.4.5",
     "vue-router": "^4.3.0",
     "vue-tsc": "2.0.12",
-    "wrangler": "^3.84.1"
+    "wrangler": "^3.84.1",
+    "vee-validate": "^4.12.4",
+    "@vee-validate/zod": "^4.12.4",
+    "@zxcvbn-ts/core": "^3.0.4"
+
   },
   "packageManager": "pnpm@9.12.3"
 }

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useNinjaWindowScroll } from '~/hooks/useScroll'
+import { useNinjaWindowScroll } from '../hooks/useScroll'
 
 const { y } = useNinjaWindowScroll()
 </script>
@@ -11,8 +11,7 @@ const { y } = useNinjaWindowScroll()
   >
     <LandingNavbar />
     <slot />
-
     <TairoPanels />
   </div>
-  <Footer />
+  <!-- <TairoIconnavFooter /> -->
 </template>

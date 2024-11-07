@@ -1,13 +1,7 @@
 // import exposeColors from './tailwind/plugin-expose-colors'
 
 export default defineNuxtConfig({
-  devtools: { enabled: true },
   extends: ['@shuriken-ui/nuxt'],
-  css: [
-    '../assets/css/colors.css',
-    '@fontsource-variable/inter/index.css',
-    '@fontsource-variable/karla/index.css',
-  ],
   modules: [
     '@nuxthub/core',
     '@nuxt/ui',
@@ -17,6 +11,13 @@ export default defineNuxtConfig({
     '@pinia/colada-nuxt',
     'nuxt-swiper',
     '@cssninja/nuxt-toaster'
+
+  ],
+  devtools: { enabled: true },
+  css: [
+    '../assets/css/colors.css',
+    '@fontsource-variable/inter/index.css',
+    '@fontsource-variable/karla/index.css'
   ],
   future: { compatibilityVersion: 4 },
   compatibilityDate: '2024-07-30',
