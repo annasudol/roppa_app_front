@@ -18,12 +18,12 @@ const props = withDefaults(
     topnav: true,
     toolbar: true,
     circularMenu: true,
-    display: 'expanded-lg'
-  }
+    display: 'expanded-lg',
+  },
 )
 
 const route = useRoute()
-const config = useAppConfig().roppa?.topnav
+const config = useAppConfig().tairo?.topnav
 const { isMobileOpen } = useTopnav()
 
 const topnavEnabled = computed(() => {
@@ -46,7 +46,7 @@ const mainClass = computed(() => {
   }
 
   const list = [
-    'bg-muted-50 dark:bg-muted-900 relative min-h-screen w-full overflow-x-hidden px-4 transition-all duration-300 xl:px-10'
+    'bg-muted-50 dark:bg-muted-900 relative min-h-screen w-full overflow-x-hidden px-4 transition-all duration-300 xl:px-10',
   ]
 
   if (props.display === 'horizontal-scroll') {
@@ -70,10 +70,7 @@ const mainClass = computed(() => {
             v-if="config?.navigation?.logo?.component"
             class="flex h-16 w-full items-center gap-x-4"
           >
-            <NuxtLink
-              to="/"
-              class="flex items-center justify-center"
-            >
+            <NuxtLink to="/" class="flex items-center justify-center">
               <component
                 :is="
                   resolveComponentOrNative(config?.navigation.logo.component)
@@ -100,14 +97,8 @@ const mainClass = computed(() => {
               v-bind="config?.navigation?.header?.props"
             />
             <div class="flex items-center justify-center md:hidden">
-              <button
-                type="button"
-                @click="isMobileOpen = true"
-              >
-                <Icon
-                  name="lucide:menu"
-                  class="text-muted-400 size-6"
-                />
+              <button type="button" @click="isMobileOpen = true">
+                <Icon name="lucide:menu" class="text-muted-400 size-6" />
               </button>
             </div>
           </div>
@@ -133,12 +124,12 @@ const mainClass = computed(() => {
           class="pt-40 md:pt-36"
           :class="[
             props.display === 'condensed' && 'w-full',
-            props.display === 'horizontal-scroll'
-              && 'mx-auto w-full overflow-x-auto',
+            props.display === 'horizontal-scroll' &&
+              'mx-auto w-full overflow-x-auto',
             props.display === 'expanded-sm' && 'mx-auto w-full max-w-5xl',
             props.display === 'expanded-md' && 'mx-auto w-full max-w-6xl',
             props.display === 'expanded-lg' && 'mx-auto w-full max-w-7xl',
-            props.display === 'expanded-xl' && 'mx-auto w-full'
+            props.display === 'expanded-xl' && 'mx-auto w-full',
           ]"
         >
           <slot />
