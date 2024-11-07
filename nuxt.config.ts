@@ -1,6 +1,6 @@
 // import exposeColors from './tailwind/plugin-expose-colors'
 
-import { appRules } from './config/routes-rules';
+import { appRules } from './config/routes-rules'
 
 export default defineNuxtConfig({
   extends: ['@shuriken-ui/nuxt'],

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useNinjaWindowScroll } from '../hooks/useScroll'
+import LandingFooter from '~/components/landing/Footer.vue';
 
 const { y } = useNinjaWindowScroll()
 </script>
@@ -12,6 +13,7 @@ const { y } = useNinjaWindowScroll()
     <LandingNavbar />
     <slot />
     <RoppaPanels />
+    <LandingFooter />
   </div>
   <!-- <RoppaIconnavFooter /> -->
 </template>
