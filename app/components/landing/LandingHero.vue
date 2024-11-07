@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { useNinjaWindowScroll } from '~/hooks/useScroll';
-import { useTailwindColors } from '~/hooks/useTailwindColors';
+import { useNinjaWindowScroll } from '~/hooks/useScroll'
+import { useTailwindColors } from '~/hooks/useTailwindColors'
 
 const { y } = useNinjaWindowScroll()
 
@@ -13,15 +13,15 @@ function useGaugePersonal() {
 
   const options = {
     title: {
-      text: undefined,
+      text: undefined
     },
     chart: {
       sparkline: {
-        enabled: true,
+        enabled: true
       },
       toolbar: {
-        show: false,
-      },
+        show: false
+      }
     },
     colors: [primary.value],
     plotOptions: {
@@ -38,23 +38,23 @@ function useGaugePersonal() {
             left: 0,
             color: '#999',
             opacity: 1,
-            blur: 2,
-          },
+            blur: 2
+          }
         },
         hollow: {
           margin: 0,
-          size: '35%',
+          size: '35%'
         },
         dataLabels: {
           name: {
-            show: false,
+            show: false
           },
           value: {
             offsetY: -2,
-            fontSize: '22px',
-          },
-        },
-      },
+            fontSize: '22px'
+          }
+        }
+      }
     },
     fill: {
       type: 'gradient',
@@ -64,10 +64,10 @@ function useGaugePersonal() {
         inverseColors: false,
         opacityFrom: 1,
         opacityTo: 1,
-        stops: [0, 50, 53, 91],
-      },
+        stops: [0, 50, 53, 91]
+      }
     },
-    labels: ['Average Results'],
+    labels: ['Average Results']
   }
 
   const series = shallowRef([76])
@@ -76,7 +76,7 @@ function useGaugePersonal() {
     type,
     height,
     options,
-    series,
+    series
   }
 }
 </script>
@@ -172,7 +172,10 @@ function useGaugePersonal() {
               <div
                 class="nui-mask nui-mask-blob hover:bg-muted-100 dark:hover:bg-muted-700/50 flex size-12 items-center justify-center motion-safe:transition-colors motion-safe:duration-200"
               >
-                <Icon name="ph:users-duotone" class="text-muted-400 size-5" />
+                <Icon
+                  name="ph:users-duotone"
+                  class="text-muted-400 size-5"
+                />
               </div>
             </div>
             <div class="flex h-16 w-full items-center justify-center">
@@ -216,7 +219,10 @@ function useGaugePersonal() {
               <div
                 class="nui-mask nui-mask-blob dark:hover:bg-muted-800 flex size-10 items-center justify-center hover:bg-white motion-safe:transition-colors motion-safe:duration-200"
               >
-                <Icon name="lucide:menu" class="text-muted-400 size-5" />
+                <Icon
+                  name="lucide:menu"
+                  class="text-muted-400 size-5"
+                />
               </div>
               <BaseText class="hidden sm:inline-block">
                 My Dashboard
@@ -226,7 +232,10 @@ function useGaugePersonal() {
               <div
                 class="nui-mask nui-mask-blob dark:hover:bg-muted-800 flex size-10 items-center justify-center hover:bg-white motion-safe:transition-colors motion-safe:duration-200"
               >
-                <Icon name="ph:bell-duotone" class="text-muted-400 size-5" />
+                <Icon
+                  name="ph:bell-duotone"
+                  class="text-muted-400 size-5"
+                />
               </div>
               <div
                 class="nui-mask nui-mask-blob dark:hover:bg-muted-800 flex size-10 items-center justify-center hover:bg-white motion-safe:transition-colors motion-safe:duration-200"

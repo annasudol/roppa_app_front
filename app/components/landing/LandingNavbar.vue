@@ -1,8 +1,7 @@
 <script setup lang="ts">
-import RoppaLogo from '../global/RoppaLogo.vue';
+import RoppaLogo from '../global/RoppaLogo.vue'
 
 const isMobileOpen = ref(false)
-
 </script>
 
 <template>
@@ -28,14 +27,17 @@ const isMobileOpen = ref(false)
         :class="[
           isMobileOpen
             ? 'shadow-muted-300/30 dark:shadow-muted-900/20 group-[&.scrolled]/landing:ltablet:mt-0 group-[&:not(.scrolled)]/landing:ltablet:mt-0 flex flex-col space-y-4 rounded-xl p-6 shadow-xl group-[&.scrolled]/landing:mt-2 group-[&:not(.scrolled)]/landing:mt-4 motion-safe:transition-all motion-safe:duration-200 group-[&.scrolled]/landing:lg:mt-0 group-[&:not(.scrolled)]/landing:lg:mt-0'
-            : 'hidden',
+            : 'hidden'
         ]"
       >
         <BaseLink
           to="/new"
           class="inline-flex items-center justify-center px-4"
         >
-        <Icon name="ant-design:plus-circle-outlined" class="mr-1 h-4 w-4" />
+          <Icon
+            name="ant-design:plus-circle-outlined"
+            class="mr-1 h-4 w-4"
+          />
 
           New Design
         </BaseLink>
@@ -43,7 +45,7 @@ const isMobileOpen = ref(false)
           to="/"
           class="inline-flex items-center justify-center px-4"
         >
-        How it Works
+          How it Works
         </BaseLink>
       </div>
       <div class="flex w-2/3 items-center justify-end gap-4 md:w-1/5">
@@ -53,10 +55,12 @@ const isMobileOpen = ref(false)
           color="primary"
           to="/auth/signin"
           class="w-28"
-        >        
+        >
           Sign in
-          <Icon name="ant-design:login-outlined" class="ms-1 h-4 w-4" />
-
+          <Icon
+            name="ant-design:login-outlined"
+            class="ms-1 h-4 w-4"
+          />
         </BaseButton>
         <button
           type="button"

@@ -1,11 +1,14 @@
 <script setup lang="ts">
-import { useNinjaWindowScroll } from '~/hooks/useScroll';
+import { useNinjaWindowScroll } from '~/hooks/useScroll'
 
 const { y } = useNinjaWindowScroll()
 </script>
 
 <template>
-  <div class="group/landing overflow-hidden" :class="y > 60 ? 'scrolled' : ''">
+  <div
+    class="group/landing overflow-hidden"
+    :class="y > 60 ? 'scrolled' : ''"
+  >
     <LandingNavbar />
     <slot />
 

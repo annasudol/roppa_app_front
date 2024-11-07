@@ -10,8 +10,8 @@ const props = withDefaults(
       | 'expanded-xl'
   }>(),
   {
-    display: 'expanded-lg',
-  },
+    display: 'expanded-lg'
+  }
 )
 const config = useAppConfig().roppa.iconnav?.footer
 const year = new Date().getFullYear()
@@ -37,7 +37,7 @@ const year = new Date().getFullYear()
         props.display === 'expanded-sm' && 'mx-auto w-full max-w-5xl',
         props.display === 'expanded-md' && 'mx-auto w-full max-w-6xl',
         props.display === 'expanded-lg' && 'mx-auto w-full max-w-7xl',
-        props.display === 'expanded-xl' && 'mx-auto w-full',
+        props.display === 'expanded-xl' && 'mx-auto w-full'
       ]"
     >
       <NuxtLink
@@ -51,7 +51,10 @@ const year = new Date().getFullYear()
           v-bind="config.logo.props"
         />
       </NuxtLink>
-      <div v-else class="ltablet:w-1/5 block w-full lg:w-1/5" />
+      <div
+        v-else
+        class="ltablet:w-1/5 block w-full lg:w-1/5"
+      />
       <div
         class="ltablet:mt-0 ltablet:gap-6 mt-6 flex flex-wrap items-center justify-center gap-4 lg:mt-0 lg:gap-6"
       >

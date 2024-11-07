@@ -1,15 +1,10 @@
 <script setup lang="ts">
-import RoppaLogo from '../global/RoppaLogo.vue';
-import RoppaLogoText from '../global/RoppaLogoText.vue';
-
-const isSearchOpen = useState('search-open', () => false)
 const isMobileOpen = ref(false)
-
 </script>
 
 <template>
   <div
-    class="group/nav ltablet:max-w-[1000px] ptablet:max-w-[47rem] fixed inset-x-0 top-0 z-50 mx-auto max-w-[350px] group-[&.scrolled]/landing:mt-2 group-[&:not(.scrolled)]/landing:mt-4 motion-safe:transition-all motion-safe:duration-200 lg:max-w-7xl"
+    class="group/nav ltablet:max-w-[1000px] ptablet:max-w-[47rem] fixed inset-x-0 top-0 z-50 mx-auto group-[&.scrolled]/landing:mt-2 group-[&:not(.scrolled)]/landing:mt-4 motion-safe:transition-all motion-safe:duration-200 lg:max-w-7xl px-4"
   >
     <div
       class="group-[&.scrolled]/landing:dark:bg-muted-950/95 group-[&.scrolled]/landing:border-muted-200 group-[&.scrolled]/landing:dark:border-muted-700 group-[&.scrolled]/landing:motion-safe:shadow-muted-300/30 group-[&.scrolled]/landing:motion-safe:dark:shadow-muted-800/20 flex items-center justify-between rounded-2xl border p-4 group-[&:not(.scrolled)]/landing:border-transparent group-[&.scrolled]/landing:bg-white/95 motion-safe:transition-all motion-safe:duration-200 group-[&.scrolled]/landing:motion-safe:shadow-xl"
@@ -20,7 +15,7 @@ const isMobileOpen = ref(false)
           class="ms-2 inline-flex"
           aria-label="Go to Tairo homepage"
         >
-          <RoppaLogoText
+          <RoppaLogo
             class="text-primary-500 group-[&.scrolled]/landing:h-6 group-[&:not(.scrolled)]/landing:h-7 motion-safe:transition-all motion-safe:duration-200"
           />
         </NuxtLink>
@@ -30,31 +25,40 @@ const isMobileOpen = ref(false)
         :class="[
           isMobileOpen
             ? 'shadow-muted-300/30 dark:shadow-muted-900/20 group-[&.scrolled]/landing:ltablet:mt-0 group-[&:not(.scrolled)]/landing:ltablet:mt-0 flex flex-col space-y-4 rounded-xl p-6 shadow-xl group-[&.scrolled]/landing:mt-2 group-[&:not(.scrolled)]/landing:mt-4 motion-safe:transition-all motion-safe:duration-200 group-[&.scrolled]/landing:lg:mt-0 group-[&:not(.scrolled)]/landing:lg:mt-0'
-            : 'hidden',
+            : 'hidden'
         ]"
       >
-        <NuxtLink
-          to="/demos"
-          class="inline-flex items-center justify-center px-6"
+        <BaseLink
+          to="/new"
+          class="inline-flex items-center justify-center px-4"
         >
-          Prebuilt pages
-        </NuxtLink>
-        <NuxtLink
-          to="/documentation"
-          class="inline-flex items-center justify-center px-6"
+          <Icon
+            name="ant-design:plus-circle-outlined"
+            class="mr-1 h-4 w-4"
+          />
+
+          New Design
+        </BaseLink>
+        <BaseLink
+          to="/"
+          class="inline-flex items-center justify-center px-4"
         >
-          Documentation
-        </NuxtLink>
+          How it Works
+        </BaseLink>
       </div>
-      <div class=" w-2/3 items-center justify-end gap-4 md:w-2/5">
+      <div class="flex w-2/3 items-center justify-end gap-4 md:w-1/5">
         <BaseThemeToggle aria-label="Toggle darkmode" />
-          <BaseButton
+        <BaseButton
           rounded="lg"
           color="primary"
           to="/auth/signin"
-          class="text-nowrap"
+          class="w-28"
         >
-          <span class="text-nowrap w-11">Sign in</span>
+          Sign in
+          <Icon
+            name="ant-design:login-outlined"
+            class="ms-1 h-4 w-4"
+          />
         </BaseButton>
         <button
           type="button"
