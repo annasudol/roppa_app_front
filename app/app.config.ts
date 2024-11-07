@@ -453,124 +453,28 @@ export default defineAppConfig({
         },
         items: [
           {
-            name: 'Dashboards',
-            icon: { name: 'ph:gauge-duotone', class: 'w-6 h-6' },
-            activePath: '/dashboards',
-            children: [
-              {
-                name: 'Home',
-                to: '/dashboards',
-                icon: { name: 'ph:house-duotone', class: 'w-4 h-4' }
-              },
-              {
-                name: 'Balance',
-                to: '/dashboards/balance',
-                icon: { name: 'ph:chart-pie-slice-duotone', class: 'w-4 h-4' }
-              },
-              {
-                name: 'Overview',
-                to: '/dashboards/overview',
-                icon: { name: 'ph:circles-three-duotone', class: 'w-4 h-4' }
-              },
-              {
-                name: 'Quickview',
-                to: '/dashboards/quickview',
-                icon: { name: 'ph:bank-duotone', class: 'w-4 h-4' }
-              },
-              {
-                name: 'Trading',
-                to: '/dashboards/trading',
-                icon: { name: 'ph:subtract-duotone', class: 'w-4 h-4' }
-              }
-            ]
+            name: 'New Design',
+            icon: { name: 'iconoir:hexagon-plus', class: 'w-6 h-6' },
+            activePath: '/new-design',
+            children: []
+
           },
           {
-            name: 'Banking',
-            icon: { name: 'ph:bank-duotone', class: 'w-6 h-6' },
-            activePath: '/layouts/',
-            children: [
-              {
-                name: 'Balance',
-                to: '/layouts/accounts',
-                icon: { name: 'ph:bank-duotone', class: 'w-4 h-4' }
-              },
-              {
-                name: 'Transactions',
-                to: '/layouts/transactions',
-                icon: {
-                  name: 'ph:arrows-left-right-duotone',
-                  class: 'w-4 h-4'
-                }
-              },
-              {
-                name: 'Payments',
-                to: '/layouts/payments',
-                icon: {
-                  name: 'ph:coins-duotone',
-                  class: 'w-4 h-4'
-                }
-              },
-              {
-                name: 'Cards',
-                to: '/layouts/cards',
-                icon: {
-                  name: 'ph:credit-card-duotone',
-                  class: 'w-4 h-4'
-                }
-              },
-              {
-                name: 'Credit',
-                to: '/layouts/credit',
-                icon: { name: 'ph:rocket-duotone', class: 'w-4 h-4' }
-              },
-              {
-                name: 'Invest',
-                to: '/layouts/invest',
-                icon: { name: 'ph:globe-hemisphere-west-duotone', class: 'w-4 h-4' }
-              }
-            ]
+            name: 'How it works',
+            icon: { name: 'iconoir:shield-question', class: 'w-6 h-6' },
+            activePath: '/how-it-works',
+            children: []
+
           },
           {
-            name: 'Projects',
-            icon: { name: 'ph:suitcase-duotone', class: 'w-6 h-6' },
-            activePath: '/layouts/projects',
-            children: [
-              {
-                name: 'Projects',
-                to: '/layouts/projects',
-                icon: { name: 'ph:suitcase-duotone', class: 'w-4 h-4' }
-              },
-              {
-                name: 'Boards',
-                to: '/layouts/projects/board',
-                icon: {
-                  name: 'ph:squares-four-duotone',
-                  class: 'w-4 h-4'
-                }
-              },
-              {
-                name: 'Details',
-                to: '/layouts/projects/details',
-                icon: {
-                  name: 'ph:square-half-duotone',
-                  class: 'w-4 h-4'
-                }
-              }
-            ]
-          },
-          {
-            name: 'Settings',
-            icon: { name: 'ph:gear-six-duotone', class: 'w-6 h-6' },
-            to: '/layouts/settings'
-          },
-          {
-            name: 'Customize',
-            icon: { name: 'ph:drop-half-bottom-duotone', class: 'w-6 h-6' },
-            click: () => {
-              const isSwitcherOpen = useState('switcher-open', () => false)
-              isSwitcherOpen.value = true
-            }
+            name: 'About Us',
+            icon: { name: 'iconoir:book', class: 'w-6 h-6' },
+            activePath: '/about-us',
+            children: []
+
           }
+         
+     
         ]
       },
       circularMenu: {

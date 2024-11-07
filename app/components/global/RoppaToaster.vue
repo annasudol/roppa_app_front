@@ -11,8 +11,8 @@ const props = withDefaults(
     title: undefined,
     message: undefined,
     color: 'muted',
-    icon: undefined,
-  },
+    icon: undefined
+  }
 )
 
 const state = useNinjaToasterState()

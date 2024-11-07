@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import RoppaLogo from '../global/RoppaLogo.vue'
+import IconTopMenu from '../global/IconTopMenu.vue'
 
 const isMobileOpen = ref(false)
 </script>
@@ -30,23 +31,20 @@ const isMobileOpen = ref(false)
             : 'hidden'
         ]"
       >
-        <BaseLink
-          to="/new"
-          class="inline-flex items-center justify-center px-4"
+        <IconTopMenu :open="isMobileOpen" />
+        <BaseButton
+          rounded="lg"
+          color="primary"
+          to="/auth/signin"
+          class="w-32 text-nowrap"
+          :class="!isMobileOpen && 'hidden'"
         >
+          Sign in
           <Icon
-            name="ant-design:plus-circle-outlined"
-            class="mr-1 h-4 w-4"
+            name="ant-design:login-outlined"
+            class="ms-1 h-4 w-4"
           />
-
-          New Design
-        </BaseLink>
-        <BaseLink
-          to="/"
-          class="inline-flex items-center justify-center px-4"
-        >
-          How it Works
-        </BaseLink>
+        </BaseButton>
       </div>
       <div class="flex w-2/3 items-center justify-end gap-4 md:w-1/5">
         <BaseThemeToggle aria-label="Toggle darkmode" />
@@ -54,7 +52,7 @@ const isMobileOpen = ref(false)
           rounded="lg"
           color="primary"
           to="/auth/signin"
-          class="w-32 text-nowrap"
+          class="w-32 text-nowrap hidden ltablet:flex lg:flex"
         >
           Sign in
           <Icon
@@ -64,7 +62,7 @@ const isMobileOpen = ref(false)
         </BaseButton>
         <button
           type="button"
-          class="ltablet:hidden flex items-center justify-center lg:hidden"
+          class="flex items-center justify-center ltablet:hidden lg:hidden"
           :aria-label="isMobileOpen ? 'Close menu' : 'Open menu'"
           @click="isMobileOpen = !isMobileOpen"
         >
