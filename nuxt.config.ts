@@ -11,7 +11,6 @@ export default defineNuxtConfig({
     '@pinia/colada-nuxt',
     'nuxt-swiper',
     '@cssninja/nuxt-toaster'
-
   ],
   devtools: { enabled: true },
   css: [

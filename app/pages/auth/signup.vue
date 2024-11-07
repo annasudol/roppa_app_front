@@ -97,7 +97,7 @@ const onSubmit = handleSubmit(async (values) => {
     return
   }
 
-  router.push('/layouts/onboarding-1')
+  router.push('/dashboard')
 })
 </script>
 

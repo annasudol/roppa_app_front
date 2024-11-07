@@ -54,7 +54,7 @@ const isMobileOpen = ref(false)
           rounded="lg"
           color="primary"
           to="/auth/signin"
-          class="w-28"
+          class="w-32 text-nowrap"
         >
           Sign in
           <Icon
