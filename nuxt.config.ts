@@ -1,5 +1,7 @@
 // import exposeColors from './tailwind/plugin-expose-colors'
 
+import { appRules } from './config/routes-rules';
+
 export default defineNuxtConfig({
   extends: ['@shuriken-ui/nuxt'],
   modules: [
@@ -18,6 +20,9 @@ export default defineNuxtConfig({
     '@fontsource-variable/inter/index.css',
     '@fontsource-variable/karla/index.css'
   ],
+  routeRules: {
+    ...appRules
+  },
   future: { compatibilityVersion: 4 },
   compatibilityDate: '2024-07-30',
   hub: {

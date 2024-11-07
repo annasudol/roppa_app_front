@@ -24,11 +24,10 @@ const staticPageRule: NitroRouteConfig = isProduction
     }
   : {}
 
-export const demoRules: NitroConfig['routeRules'] = {
+export const appRules: NitroConfig['routeRules'] = {
   '/img/**': staticAssetsRule,
   '/api/**': staticAssetsRule,
+  '/': staticPageRule,
   '/dashboard/**': staticPageRule,
-  '/layout/**': staticPageRule,
-  '/wizard/**': staticPageRule,
   '/auth/**': staticPageRule
 }
