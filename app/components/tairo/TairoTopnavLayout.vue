@@ -29,7 +29,6 @@ const circularMenuEnabled = computed(() => {
 })
 
 const mainClass = computed(() => {
-
   if (!topnavEnabled.value) {
     return 'bg-muted-50 dark:bg-muted-900 relative min-h-screen w-full overflow-x-hidden px-4 transition-all duration-300 xl:px-10'
   }
@@ -37,7 +36,6 @@ const mainClass = computed(() => {
   const list = [
     'bg-muted-50 dark:bg-muted-900 relative min-h-screen w-full overflow-x-hidden px-4 transition-all duration-300 xl:px-10'
   ]
-
 
   return list
 })
