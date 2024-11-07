@@ -7,8 +7,8 @@ const year = new Date().getFullYear()
     class="dark:bg-muted-900 border-muted-200 dark:border-muted-700 relative border-t bg-white"
   >
     <NuxtLink
-      to="https://cssninja.io"
-      class="dark:bg-muted-900 absolute inset-x-0 -top-4 mx-auto flex h-9 w-14 items-center justify-center bg-white"
+      to="https://roppa.io"
+      class="dark:bg-muted-900 absolute inset-x-0 -top-4 mx-auto flex h-6 w-8 items-center justify-center bg-white"
     >
       <RoppaLogo />
     </NuxtLink>
@@ -63,14 +63,14 @@ const year = new Date().getFullYear()
         <span>
           ©
           <NuxtLink
-            to="https://cssninja.io"
+            to="https://roppa.io"
             target="_blank"
             rel="noopener"
             class="text-muted-600 hover:text-primary-500 dark:text-muted-200 dark:hover:text-primary-400 text-sm transition-colors duration-300"
           >
             Roppa
           </NuxtLink>
-          2018-{{ year }}.
+          {{ year }}.
         </span>
       </div>
     </div>
