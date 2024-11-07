@@ -1,7 +1,7 @@
 <template>
   <div>
-    <DashboardTopnav />
+    <LandingTopnav />
     <slot />
-    <DasboardFooter />
+    <LandingDashboardFooter />
   </div>
 </template>

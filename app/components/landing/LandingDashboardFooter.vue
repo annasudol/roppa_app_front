@@ -68,7 +68,7 @@ const year = new Date().getFullYear()
             rel="noopener"
             class="text-muted-600 hover:text-primary-500 dark:text-muted-200 dark:hover:text-primary-400 text-sm transition-colors duration-300"
           >
-            Css Ninja
+            Roppa
           </NuxtLink>
           2018-{{ year }}.
         </span>

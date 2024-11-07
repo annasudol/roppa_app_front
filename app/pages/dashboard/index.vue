@@ -1,6 +1,6 @@
 <script setup lang="ts">
 definePageMeta({
-  layout: 'topnav',
+  layout: 'dashboard',
   title: 'Dashboard',
   preview: {
     title: 'Dashboard',
@@ -14,5 +14,7 @@ definePageMeta({
 </script>
 
 <template>
-<div>Dashboardzzz</div>
+  <NuxtLayout>
+    <div>Dashboardzzz</div>
+  </NuxtLayout>
 </template>
