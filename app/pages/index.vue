@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { useNinjaWindowScroll } from '~/composables/useScroll'
 import { useTailwindColors } from '~/composables/useTailwindColors'
-
 const { y } = useNinjaWindowScroll()
 
 const gaugePersonal = reactive(useGaugePersonal())

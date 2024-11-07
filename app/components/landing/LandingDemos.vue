@@ -8,8 +8,8 @@ const props = withDefaults(
   }>(),
   {
     limit: undefined,
-    cta: true,
-  },
+    cta: true
+  }
 )
 
 const route = useRoute()
@@ -23,10 +23,10 @@ const onlyNew = computed({
     router.push({
       query: {
         ...route.query,
-        new: value ? '1' : undefined,
-      },
+        new: value ? '1' : undefined
+      }
     })
-  },
+  }
 })
 const selectedCategory = computed({
   get() {
@@ -36,10 +36,10 @@ const selectedCategory = computed({
     router.push({
       query: {
         ...route.query,
-        category: value ? value : undefined,
-      },
+        category: value ? value : undefined
+      }
     })
-  },
+  }
 })
 
 const demoPages = computed(() => {
@@ -143,7 +143,7 @@ const filteredDemos = computed(() => {
       return false
     }
     return preview.categories.some((category: string) =>
-      selectedCategory.value.includes(category),
+      selectedCategory.value.includes(category)
     )
   }
 
@@ -240,7 +240,10 @@ const filteredDemos = computed(() => {
             </template>
           </div>
 
-          <div v-if="props.cta" class="mt-24 flex items-center justify-center">
+          <div
+            v-if="props.cta"
+            class="mt-24 flex items-center justify-center"
+          >
             <BaseButton
               rounded="lg"
               color="primary"

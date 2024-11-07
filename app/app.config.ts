@@ -473,8 +473,6 @@ export default defineAppConfig({
             children: []
 
           }
-         
-     
         ]
       },
       circularMenu: {

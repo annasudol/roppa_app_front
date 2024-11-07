@@ -14,16 +14,12 @@ const props = withDefaults(
   }
 )
 
-const route = useRoute()
 const config = useAppConfig().roppa?.topnav
-const { isMobileOpen } = useTopnav()
-
+console.log(config?.toolbar)
 const topnavEnabled = computed(() => {
   return config?.navigation?.enabled as boolean !== false && props.topnav !== false
 })
-const toolbarEnabled = computed(() => {
-  return config?.toolbar?.enabled as boolean !== false && props.toolbar !== false
-})
+
 const circularMenuEnabled = computed(() => {
   return config?.circularMenu?.enabled as boolean !== false && props.circularMenu !== false
 })
@@ -46,7 +42,6 @@ const mainClass = computed(() => {
     <div class="dark:bg-muted-900 bg-muted-50 pb-20">
       <slot name="navigation">
         <TairoTopnavNavigation
-          v-if="topnavEnabled"
           position="fixed"
         >
           <div
@@ -64,46 +59,25 @@ const mainClass = computed(() => {
                 v-bind="config?.navigation.logo.props"
               />
             </NuxtLink>
-            <BaseHeading
-              v-if="config?.toolbar?.showTitle"
-              as="h1"
-              size="lg"
-              weight="light"
-              class="text-muted-800 hidden md:block dark:text-white"
-            >
-              <slot name="title">
-                {{ route.meta.title }}
-              </slot>
-            </BaseHeading>
             <component
               :is="
                 resolveComponentOrNative(config?.navigation?.header?.component)
               "
               v-bind="config?.navigation?.header?.props"
             />
-            <div class="flex items-center justify-center md:hidden">
-              <button
-                type="button"
-                @click="isMobileOpen = true"
-              >
-                <Icon
-                  name="lucide:menu"
-                  class="text-muted-400 size-6"
-                />
-              </button>
-            </div>
           </div>
           <template #toolbar>
-            <div v-if="toolbarEnabled">
+            <div>
               <div class="flex items-center justify-end gap-4 md:gap-2">
-                <template v-for="tool of config?.toolbar?.tools">
+                <BaseThemeToggle />
+                <!-- <template v-for="tool of config?.toolbar?.tools">
                   <component
                     :is="resolveComponentOrNative(tool.component)"
                     v-if="tool.component"
                     :key="tool.component"
                     v-bind="tool.props"
                   />
-                </template>
+                </template> -->
               </div>
             </div>
           </template>
@@ -118,7 +92,7 @@ const mainClass = computed(() => {
         </div>
       </div>
 
-      <TairoPanels />
+      <!-- <TairoPanels /> -->
 
       <TairoTopnavCircularMenu v-if="circularMenuEnabled" />
     </div>
