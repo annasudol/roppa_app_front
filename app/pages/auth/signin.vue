@@ -125,7 +125,7 @@ const onSubmit = handleSubmit(async (values) => {
       >
         <div class="mx-auto flex w-full max-w-xs items-center justify-between">
           <NuxtLink
-            to="/dashboards"
+            to="/"
             class="text-muted-400 hover:text-primary-500 dark:text-muted-700 dark:hover:text-primary-500 transition-colors duration-300"
           >
             <RoppaLogo class="size-10" />
