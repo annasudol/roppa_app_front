@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useNinjaWindowScroll } from '../hooks/useScroll'
-import LandingFooter from '~/components/landing/Footer.vue';
+import LandingFooter from '~/components/landing/LandingFooter.vue';
 
 const { y } = useNinjaWindowScroll()
 </script>
