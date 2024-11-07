@@ -2,6 +2,6 @@
   <div>
     <slot />
 
-    <TairoPanels />
+    <RoppaPanels />
   </div>
 </template>

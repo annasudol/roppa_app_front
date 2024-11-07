@@ -175,7 +175,7 @@ const filteredDemos = computed(() => {
           size="lg"
           class="text-muted-500 dark:text-muted-100 mx-auto mb-4"
         >
-          Tairo ships with {{ demoPages.length }}+ prebuilt pages, including
+          Roppa ships with {{ demoPages.length }}+ prebuilt pages, including
           dashboard and app examples, as well as collections like lists, grids,
           profile and personal pages and many other authentication and utility
           pages.

@@ -23,7 +23,7 @@
             size="lg"
             class="text-muted-500 dark:text-muted-100 ptablet:max-w-lg ptablet:mx-auto mb-4 max-w-2xl"
           >
-            Tairo is a powerful Nuxt app starter with a robust and extensible
+            Roppa is a powerful Nuxt app starter with a robust and extensible
             codebase. It brings everything you need to build a professional and
             beautiful frontend for your app.
           </BaseParagraph>

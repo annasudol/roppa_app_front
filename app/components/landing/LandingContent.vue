@@ -14,13 +14,13 @@
           lead="normal"
           class="text-muted-800 mx-auto mb-4 dark:text-white"
         >
-          Why choose Tairo
+          Why choose Roppa
         </BaseHeading>
         <BaseParagraph
           size="lg"
           class="text-muted-500 dark:text-muted-100 mx-auto mb-4"
         >
-          Tairo is a modern, clean and fully responsive Nuxt / Tailwind CSS
+          Roppa is a modern, clean and fully responsive Nuxt / Tailwind CSS
           dashboard system. It is built with care and provides a solid
           foundation for your next project, while yielding an exquisite
           developer experience.
@@ -52,7 +52,7 @@
               class="text-muted-500 dark:text-muted-400"
             >
               That's why our team has put in countless hours of work, paying
-              close attention to every detail, to ensure that Tairo delivers a
+              close attention to every detail, to ensure that Roppa delivers a
               seamless user experience. From the color schemes to the
               typography, every aspect has been carefully crafted to make sure
               it is pleasing to the eye and easy to navigate.
@@ -96,9 +96,9 @@
               class="text-muted-500 dark:text-muted-400"
             >
               We have chosen tools that developers love, such as Visual Studio
-              Code, and optimized Tairo for the best possible experience. Our
+              Code, and optimized Roppa for the best possible experience. Our
               developers have created a set of custom settings and plugins to
-              make coding with Tairo a breeze. We have integrated plugins like
+              make coding with Roppa a breeze. We have integrated plugins like
               Vue Language Features, Nuxt Component Meta, and Nuxt Dev Tools,
               which enable developers to easily create and manage their
               projects.
@@ -108,11 +108,11 @@
               lead="normal"
               class="text-muted-500 dark:text-muted-400"
             >
-              Tairo supports Typescript and implements features like props
+              Roppa supports Typescript and implements features like props
               autocompletion, which helps developers avoid typing errors and
               increase their productivity. To make it even more customizable, we
               have made extensible configuration files , so that developers can
-              easily customize and extend Tairo to fit their needs.
+              easily customize and extend Roppa to fit their needs.
             </BaseParagraph>
           </div>
         </div>
@@ -132,7 +132,7 @@
               lead="normal"
               class="text-muted-500 dark:text-muted-400"
             >
-              Tairo combines the power of the latest version of Nuxt with the
+              Roppa combines the power of the latest version of Nuxt with the
               popular Tailwind CSS framework, allowing you to create stunning
               designs with ease.
             </BaseParagraph>
@@ -179,11 +179,11 @@
             lead="normal"
             class="text-muted-800 mb-1 dark:text-white"
           >
-            Get Tairo now
+            Get Roppa now
           </BaseHeading>
           <BaseParagraph size="sm" class="text-muted-500 dark:text-muted-100">
             Don't waste time, it's time to kickstart your new app. Start
-            building your next project with Tairo today.
+            building your next project with Roppa today.
           </BaseParagraph>
         </div>
         <div class="my-2 flex justify-center gap-2">
@@ -195,7 +195,7 @@
             to="https://go.cssninja.io/buy-tairo"
           >
             <Icon name="cib:envato" class="size-4" />
-            <span>Purchase Tairo</span>
+            <span>Purchase Roppa</span>
           </BaseButton>
         </div>
         <div>

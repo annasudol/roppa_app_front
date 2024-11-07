@@ -116,7 +116,7 @@ function useGaugePersonal() {
           size="lg"
           class="text-muted-500 dark:text-muted-100 mx-auto mb-4 max-w-2xl"
         >
-          Tairo is the ultimate solution for developers looking to build
+          Roppa is the ultimate solution for developers looking to build
           beautiful Nuxt dashboards in no time, with the power of Shuriken UI
           and Tailwind CSS.
         </BaseParagraph>
@@ -128,7 +128,7 @@ function useGaugePersonal() {
             shadow="hover"
             class="!h-12 w-44"
           >
-            Buy Tairo Now
+            Buy Roppa Now
           </BaseButton>
         </div>
       </div>
@@ -146,7 +146,7 @@ function useGaugePersonal() {
             class="ltablet:w-16 ltablet:flex dark:bg-muted-800 absolute left-0 top-0 hidden h-full w-20 flex-col bg-white group-[&.scrolled]/landing:translate-x-0 group-[&:not(.scrolled)]/landing:-translate-x-full group-[&.scrolled]/landing:opacity-100 group-[&:not(.scrolled)]/landing:opacity-0 motion-safe:transition-all motion-safe:duration-200 lg:flex"
           >
             <div class="flex h-20 w-full items-center justify-center">
-              <TairoLogo class="text-primary-500 size-8" />
+              <RoppaLogo class="text-primary-500 size-8" />
             </div>
             <div class="flex h-16 w-full items-center justify-center">
               <div

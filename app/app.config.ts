@@ -50,7 +50,7 @@ export default defineAppConfig({
       },
       navigation: {
         logo: {
-          component: 'TairoLogo',
+          component: 'RoppaLogo',
           props: { class: 'text-primary-600 h-10' }
         },
         items: [
@@ -58,42 +58,7 @@ export default defineAppConfig({
             title: 'Dashboards',
             icon: { name: 'ph:sidebar-duotone', class: 'w-5 h-5' },
             subsidebar: { component: 'DemoSubsidebarDashboards' },
-            activePath: '/dashboards'
-          },
-          {
-            title: 'Layouts',
-            icon: { name: 'ph:app-window-duotone', class: 'w-5 h-5' },
-            subsidebar: { component: 'DemoSubsidebarLayouts' },
-            activePath: '/layouts'
-          },
-          {
-            title: 'Chat',
-            icon: { name: 'ph:chat-circle-duotone', class: 'w-5 h-5' },
-            to: '/dashboards/messaging'
-          },
-          {
-            title: 'Customize',
-            icon: { name: 'ph:drop-half-bottom-duotone', class: 'w-5 h-5' },
-            click: () => {
-              const isOpen = useState('switcher-open', () => false)
-              isOpen.value = true
-            },
-            position: 'end'
-          },
-          {
-            title: 'Search',
-            icon: { name: 'ph:magnifying-glass-duotone', class: 'w-5 h-5' },
-            click: () => {
-              const isOpen = useState('search-open', () => false)
-              isOpen.value = true
-            },
-            position: 'end'
-          },
-          {
-            title: 'Settings',
-            icon: { name: 'ph:gear-six-duotone', class: 'w-5 h-5' },
-            to: '/layouts/settings',
-            position: 'end'
+            activePath: '/dashboard'
           },
           {
             title: 'My Account',
@@ -331,7 +296,7 @@ export default defineAppConfig({
       navigation: {
         enabled: true,
         logo: {
-          component: 'TairoLogo',
+          component: 'RoppaLogo',
           props: { class: 'text-primary-600 h-10 w-10' }
         },
         header: {
@@ -441,11 +406,11 @@ export default defineAppConfig({
       footer: {
         enabled: true,
         logoSeparator: {
-          component: 'TairoLogo',
+          component: 'RoppaLogo',
           props: { class: 'text-primary-500 h-7 w-7' }
         },
         logo: {
-          component: 'TairoLogoText',
+          component: 'RoppaLogoText',
           props: {
             class:
               'text-muted-300 ltablet:mx-0 mx-auto h-4 transition-all duration-200 lg:mx-0'
@@ -483,7 +448,7 @@ export default defineAppConfig({
       navigation: {
         enabled: true,
         logo: {
-          component: 'TairoLogo',
+          component: 'RoppaLogo',
           props: { class: 'text-primary-600 h-10 w-10' }
         },
         items: [
@@ -655,11 +620,11 @@ export default defineAppConfig({
       footer: {
         enabled: true,
         logoSeparator: {
-          component: 'TairoLogo',
+          component: 'RoppaLogo',
           props: { class: 'text-primary-500 h-7 w-7' }
         },
         logo: {
-          component: 'TairoLogoText',
+          component: 'RoppaLogoText',
           props: {
             class:
               'text-muted-300 ltablet:mx-0 mx-auto h-4 transition-all duration-200 lg:mx-0'

@@ -128,7 +128,7 @@ const onSubmit = handleSubmit(async (values) => {
             to="/dashboards"
             class="text-muted-400 hover:text-primary-500 dark:text-muted-700 dark:hover:text-primary-500 transition-colors duration-300"
           >
-            <TairoLogo class="size-10" />
+            <RoppaLogo class="size-10" />
           </NuxtLink>
           <div>
             <BaseThemeToggle />
@@ -267,7 +267,7 @@ const onSubmit = handleSubmit(async (values) => {
             size="xs"
             class="text-muted-400"
           >
-            © {{ new Date().getFullYear() }} Tairo. All rights reserved.
+            © {{ new Date().getFullYear() }} Roppa. All rights reserved.
           </BaseText>
         </div>
       </div>

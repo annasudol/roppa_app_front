@@ -11,7 +11,7 @@ const { y } = useNinjaWindowScroll()
   >
     <LandingNavbar />
     <slot />
-    <TairoPanels />
+    <RoppaPanels />
   </div>
-  <!-- <TairoIconnavFooter /> -->
+  <!-- <RoppaIconnavFooter /> -->
 </template>

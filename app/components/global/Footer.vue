@@ -17,10 +17,10 @@ const year = new Date().getFullYear()
     >
       <NuxtLink
         to="/"
-        aria-label="Go to Tairo homepage"
+        aria-label="Go to Roppa homepage"
         class="ltablet:w-1/5 block w-full lg:w-1/5"
       >
-        <TairoLogoText
+        <RopaLogoText
           class="text-muted-300 ltablet:mx-0 mx-auto h-6 transition-all duration-200 lg:mx-0"
         />
       </NuxtLink>

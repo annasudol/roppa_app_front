@@ -15,7 +15,7 @@ const isMobileOpen = ref(false)
         <NuxtLink
           to="/"
           class="ms-2 inline-flex"
-          aria-label="Go to Tairo homepage"
+          aria-label="Go to Roppa homepage"
         >
           <RoppaLogo
             class="text-primary-500 group-[&.scrolled]/landing:h-6 group-[&:not(.scrolled)]/landing:h-7 motion-safe:transition-all motion-safe:duration-200"

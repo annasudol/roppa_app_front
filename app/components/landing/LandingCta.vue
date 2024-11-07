@@ -33,7 +33,7 @@
             <NuxtImg
               class="ltablet:translate-y-20 block translate-x-6 translate-y-6 rounded-md object-cover object-left-top sm:translate-x-16 lg:translate-y-20 dark:hidden"
               src="/img/apps/tairo-screen-full.png"
-              alt="Tairo demo screenshot lightmode"
+              alt="Roppa demo screenshot lightmode"
               format="webp"
               width="568"
               height="532"
@@ -43,7 +43,7 @@
             <NuxtImg
               class="ltablet:translate-y-20 hidden translate-x-6 translate-y-6 rounded-md object-cover object-left-top sm:translate-x-16 lg:translate-y-20 dark:block"
               src="/img/apps/tairo-screen-full-dark.png"
-              alt="Tairo demo screenshot darkmode"
+              alt="Roppa demo screenshot darkmode"
               format="webp"
               width="568"
               height="532"

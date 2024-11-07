@@ -20,7 +20,7 @@
           size="lg"
           class="text-muted-500 dark:text-muted-100 mx-auto mb-4"
         >
-          Tairo is a cutting edge dashboard system that uses the latest
+          Roppa is a cutting edge dashboard system that uses the latest
           javascript and technologies and remains truthfull to the best coding
           practices, making it and ideal choice for your next headless
           application.
@@ -74,7 +74,7 @@
           rounded="lg"
           color="primary"
         >
-          Get Tairo Dashboard System
+          Get Roppa Dashboard System
         </BaseButton>
       </div>
     </div>

@@ -51,7 +51,7 @@ export function usePanels() {
 
   const panels = computed<Panel[]>(
     () =>
-      app.tairo?.panels?.map(panel => ({
+      app.roppa?.panels?.map(panel => ({
         ...panel,
         size: (panel as any).size ?? 'sm',
         position: (panel as any).position ?? 'left',

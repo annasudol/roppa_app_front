@@ -4,8 +4,8 @@ import type {
 } from '@cssninja/nuxt-toaster'
 import type { RoppaToaster } from '#components'
 
-// This type infer the props of TairoToaster component
-type TairoToasterProps = Omit<
+// This type infer the props of RoppaToaster component
+type RoppaToasterProps = Omit<
   InstanceType<typeof RoppaToaster>['$props'],
   keyof DefaultProps
 >
@@ -14,9 +14,9 @@ export function useToaster() {
   const $nt = useNinjaToaster()
 
   /**
-   * Display a TairoToaster component
+   * Display a RoppaToaster component
    */
-  function show(props: TairoToasterProps, options?: NinjaToasterBaseProps) {
+  function show(props: RoppaToasterProps, options?: NinjaToasterBaseProps) {
     return $nt.showComponent('RoppaToaster', {
       props,
       options
