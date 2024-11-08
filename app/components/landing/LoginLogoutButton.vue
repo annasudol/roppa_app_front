@@ -27,7 +27,7 @@ const { loggedIn, clear } = useUserSession()
       color="primary"
       class="w-32 text-nowrap"
       :class="classes"
-      :onclick="clear"
+      @click="clear"
     >
       Logout
       <Icon

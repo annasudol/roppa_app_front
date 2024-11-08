@@ -1,9 +1,20 @@
 <script setup lang="ts">
 import { useNinjaWindowScroll } from '~/composables/useScroll'
-import { useTailwindColors } from '~/composables/useTailwindColors'
 const { y } = useNinjaWindowScroll()
 
 const gaugePersonal = reactive(useGaugePersonal())
+definePageMeta({
+  layout: 'default',
+  title: 'Dashboard',
+  preview: {
+    title: 'Dashboard',
+    description: 'For authentication and sign up',
+    categories: ['layouts', 'authentication'],
+    src: '/img/screens/auth-signup-3.png',
+    srcDark: '/img/screens/auth-signup-3-dark.png',
+    order: 159
+  }
+})
 
 function useGaugePersonal() {
   const { primary } = useTailwindColors()

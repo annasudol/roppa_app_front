@@ -1,16 +1,17 @@
 <script setup lang="ts">
 const { user } = useUserSession()
+console.log(user.value, 'user')
 </script>
 
 <template>
-  <NuxtLayout>
+  <div>
     <!-- Header -->
     <div class="mb-8 flex flex-col justify-between md:flex-row md:items-center">
       <div
         class="ltablet:max-w-full flex max-w-[425px] flex-col items-center gap-4 text-center md:flex-row md:text-left lg:max-w-full"
       >
         <BaseAvatar
-          src="/img/avatars/2.svg"
+          :src="user?.pic"
           size="lg"
         />
         <div>
@@ -21,10 +22,10 @@ const { user } = useUserSession()
             lead="tight"
             class="text-muted-800 dark:text-white"
           >
-            <span>Hello, {{ user?.id }}</span>
+            <span>Hello, {{ user?.name }}</span>
           </BaseHeading>
         </div>
       </div>
     </div>
-  </NuxtLayout>
+  </div>
 </template>

@@ -8,11 +8,13 @@ export default defineOAuthGoogleEventHandler({
     await setUserSession(event, {
       user: {
         id: user.id,
-        login: user.email
+        email: user.email,
+        name: user.name,
+        pic: user.picture
       },
       loggedInAt: Date.now()
     })
 
-    return sendRedirect(event, '/')
+    return sendRedirect(event, '/dashboard')
   }
 })
