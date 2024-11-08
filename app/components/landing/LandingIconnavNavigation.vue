@@ -20,7 +20,7 @@ const props = withDefaults(
 const isSearchOpen = useState('search-open', () => false)
 const metaKey = useMetaKey()
 const { menuItems, selectedMenuItem } = useIconnav()
-
+console.log(menuItems, 'menuItems')
 const router = useRouter()
 </script>
 
@@ -55,7 +55,7 @@ const router = useRouter()
         <!-- Menu Items -->
         <div class="ltablet:flex hidden grow justify-center gap-x-6 lg:flex">
           <div
-            v-for="(item, index) in menuItems"
+            v-for="(item, index) in (menuItems as any)"
             :key="index"
             class="text-center"
           >
@@ -64,7 +64,7 @@ const router = useRouter()
               type="button"
               class="group flex flex-col"
               :class="
-                selectedMenuItem?.activePath === item.activePath
+                (selectedMenuItem as any)?.activePath === item.activePath
                   && '[&>div]:!bg-primary-500/10 [&>div]:!text-primary-500 dark:[&>div]:!bg-primary-500/20 [&>p]:!text-primary-500'
               "
               @click="

@@ -1,6 +1,3 @@
-<script setup lang="ts">
-const year = new Date().getFullYear()
-</script>
 
 <template>
   <footer class="bg-muted-100 dark:dark:bg-muted-950/95  border-muted-200 dark:border-muted-700 relative border-t">
@@ -224,7 +221,7 @@ const year = new Date().getFullYear()
         </div>
         <div class="mt-16 border-t border-gray-400/30 pt-8 sm:mt-20 lg:mt-24">
           <div class="text-md text-center text-slate-700 dark:text-gray-200">
-            Copyright <span class="text-2xl relative top-1">&reg;</span> {{ year }} . Crafted with
+            Copyright <span class="text-2xl relative top-1">&reg;</span> {{ new Date().getFullYear() }} . Crafted with
             <span class="text-slate-700 dark:text-gray-200">♥</span> by AI enthusiasts at
             <BaseLink
               to="https://roppa.ai"

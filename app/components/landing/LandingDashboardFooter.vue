@@ -1,7 +1,3 @@
-<script setup lang="ts">
-const year = new Date().getFullYear()
-</script>
-
 <template>
   <footer
     class="dark:bg-muted-900 border-muted-200 dark:border-muted-700 relative border-t bg-white"
@@ -70,7 +66,7 @@ const year = new Date().getFullYear()
           >
             Roppa
           </NuxtLink>
-          {{ year }}.
+          {{ new Date().getFullYear() }}.
         </span>
       </div>
     </div>

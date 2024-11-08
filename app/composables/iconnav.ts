@@ -45,8 +45,7 @@ export function useIconnav() {
   ]
 
   const menuItems = computed(() => {
-    return items.map(
-      navigation =>
+    return items.map(navigation =>
         <TairoIconnavResolvedConfig>{
           ...navigation
         }
