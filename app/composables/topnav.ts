@@ -18,43 +18,6 @@ export interface TairoTopnavResolvedConfig {
   activePath?: string
 }
 
-/**
- * Composable to manage navigation of the sidebar layout
- *
- * You can define sidebar items in your app.config.ts
- *
- * ```ts
- * export default defineAppConfig({
- *   roppa: {
- *     topnav: {
- *       items: {
- *           name: 'Dashboards',
- *
- *           // You can define an active path to highlight the item
- *           activePath: '/dashboards',
- *
- *           // You can define an icon to display in the sidebar
- *           icon: { name: 'ph:sidebar-duotone', class: 'w-5 h-5' },
- *
- *           // Or use a component
- *           // It should be registered in the app as a global component
- *           component: { name: 'BaseThemeToggle', props: {} },
- *
- *           // Or you can define a route to navigate to
- *           to: '/dashboards',
- *
- *           // Or you can define a click handler (eg. to open a panel)
- *           click: () => {
- *             const { open } = usePanels()
- *             open('panel-name')
- *           },
- *         },
- *       ],
- *     },
- *   },
- * })
- * ```
- */
 export function useTopnav() {
   const route = useRoute()
   const topnavItems = [
