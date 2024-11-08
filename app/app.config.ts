@@ -281,11 +281,10 @@ export default defineAppConfig({
             to: '/dashboards/messaging'
           },
           {
-            name: 'Customize',
-            icon: { name: 'ph:drop-half-bottom-duotone', class: 'w-5 h-5' },
+            name: 'Logout',
+            icon: { name: 'line-md:logout', class: 'w-5 h-5' },
             click: () => {
-              const isSwitcherOpen = useState('switcher-open', () => false)
-              isSwitcherOpen.value = true
+              //TODO - add logout
             },
             position: 'end'
           }

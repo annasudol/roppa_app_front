@@ -25,17 +25,21 @@ const endMenuItems = computed(
         : '-translate-x-full lg:translate-x-0'
     ]"
   >
-    <!-- Header -->
-    <slot name="header">
-      <component
-        :is="
-          resolveComponentOrNative(
-            app.roppa?.collapse?.navigation?.header?.component
-          )
-        "
-        v-if="app.roppa?.collapse?.navigation?.header?.component"
-      />
-    </slot>
+    <div class="w-full px-10">
+      <div
+        v-if="!isOpen"
+        class="flex justify-center mt-3"
+      >
+        <RoppaLogo class="text-primary-500 size-8 " />
+      </div>
+      <div
+        v-else
+        class="mt-3"
+      >
+        <RoppaLogoText class="text-primary-500 size-16" />
+      </div>
+    </div>
+
     <!-- Body -->
     <div
       class=" relative flex w-full grow flex-col py-6"
@@ -170,15 +174,5 @@ const endMenuItems = computed(
       </ul>
     </div>
     <!-- Footer -->
-    <slot name="footer">
-      <component
-        :is="
-          resolveComponentOrNative(
-            app.roppa?.collapse?.navigation?.footer?.component
-          )
-        "
-        v-if="app.roppa?.collapse?.navigation?.footer?.component"
-      />
-    </slot>
   </div>
 </template>
