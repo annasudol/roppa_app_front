@@ -1,6 +1,6 @@
 <script setup lang="ts">
 definePageMeta({
-  layout: 'topnav',
+  layout: 'collapse',
   title: 'Dashboard',
   preview: {
     title: 'Dashboard',
