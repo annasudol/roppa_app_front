@@ -4,7 +4,7 @@ const year = new Date().getFullYear()
 
 <template>
   <footer class="bg-muted-100 dark:dark:bg-muted-950/95  border-muted-200 dark:border-muted-700 relative border-t">
-    <div class="container mx-auto p-0 md:p-8 xl:px-0">
+    <div class="w-7xl mx-auto p-0 xl:px-0">
       <div class="mx-auto max-w-7xl sm:px-8 pt-12">
         <div class="xl:grid xl:grid-cols-3 xl:gap-8">
           <div class="space-y-4">
