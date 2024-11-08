@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import TairoCollapseBurger from './TairoCollapseBurger.vue'
+
 const props = withDefaults(
   defineProps<{
     collapse?: boolean
