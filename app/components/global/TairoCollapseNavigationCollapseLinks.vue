@@ -49,7 +49,7 @@ function onDropClick() {
         class="block whitespace-nowrap font-sans text-sm"
         :class="[
           isActive && 'text-primary-500',
-          !props.expanded ? 'hidden' : 'block',
+          !props.expanded ? 'hidden' : 'block'
         ]"
       >
         {{ item.name }}
@@ -72,7 +72,7 @@ function onDropClick() {
       :class="{
         'max-h-0 overflow-hidden opacity-0 group-focus-within:max-h-max group-focus-within:overflow-visible group-focus-within:opacity-100':
           !isOpen,
-        'after:border-muted-200 max-h-max opacity-100': isOpen,
+        'after:border-muted-200 max-h-max opacity-100': isOpen
       }"
     >
       <li

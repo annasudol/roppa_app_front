@@ -2,7 +2,6 @@
 import { useCollapse } from '~/composables/collapse'
 
 const { isOpen, isMobileOpen, menuItems } = useCollapse()
-const app = useAppConfig()
 
 const startMenuItems = computed(
   () =>

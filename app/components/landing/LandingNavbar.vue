@@ -36,6 +36,7 @@ const isMobileOpen = ref(false)
         <LoginLogoutButton :classes="!isMobileOpen ? 'hidden' : 'md:hidden'" />
       </div>
       <div class="flex w-2/3 items-center justify-end gap-4 md:w-1/5">
+        <DemoToolbarAccountMenu />
         <BaseThemeToggle aria-label="Toggle darkmode" />
         <LoginLogoutButton classes="hidden md:block" />
         <button

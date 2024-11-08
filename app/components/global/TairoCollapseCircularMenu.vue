@@ -5,6 +5,7 @@ const app = useAppConfig()
 const isOpened = ref(false)
 const isScrolled = computed(() => {
   if (y.value < 60) {
+    // eslint-disable-next-line vue/no-side-effects-in-computed-properties
     isOpened.value = false
   }
   return y.value > 60
