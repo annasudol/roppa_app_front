@@ -18,55 +18,34 @@ export interface TairoIconnavResolvedConfig {
   activePath?: string
 }
 
-/**
- * Composable to manage navigation of the sidebar layout
- *
- * You can define sidebar items in your app.config.ts
- *
- * ```ts
- * export default defineAppConfig({
- *   tairo: {
- *     iconnav: {
- *       items: {
- *           name: 'Dashboards',
- *
- *           // You can define an active path to highlight the item
- *           activePath: '/dashboards',
- *
- *           // You can define an icon to display in the sidebar
- *           icon: { name: 'ph:sidebar-duotone', class: 'w-5 h-5' },
- *
- *           // Or use a component
- *           // It should be registered in the app as a global component
- *           component: { name: 'BaseThemeToggle', props: {} },
- *
- *           // Or you can define a route to navigate to
- *           to: '/dashboards',
- *
- *           // Or you can define a click handler (eg. to open a panel)
- *           click: () => {
- *             const { open } = usePanels()
- *             open('panel-name')
- *           },
- *         },
- *       ],
- *     },
- *   },
- * })
- * ```
- */
 export function useIconnav() {
   const route = useRoute()
-  const app = useAppConfig()
+  const items = [
+    {
+      name: 'New Design',
+      icon: { name: 'iconoir:hexagon-plus', class: 'w-6 h-6' },
+      activePath: '/new-design',
+      children: []
+
+    },
+    {
+      name: 'How it works',
+      icon: { name: 'iconoir:shield-question', class: 'w-6 h-6' },
+      activePath: '/how-it-works',
+      children: []
+
+    },
+    {
+      name: 'About Us',
+      icon: { name: 'iconoir:book', class: 'w-6 h-6' },
+      activePath: '/about-us',
+      children: []
+
+    }
+  ]
 
   const menuItems = computed(() => {
-    if (
-      app.roppa.iconnav?.navigation?.enabled === false
-      || app.roppa.iconnav?.navigation?.items?.length === 0
-    ) {
-      return []
-    }
-    return app.roppa.iconnav?.navigation?.items?.map(
+    return items.map(
       navigation =>
         <TairoIconnavResolvedConfig>{
           ...navigation

@@ -10,53 +10,54 @@ interface Panel {
   overlay?: boolean
 }
 
-/**
- * Composable to manage panels
- *
- * You can define panels in your app.config.ts
- *
- * ```ts
- * export default defineAppConfig({
- *   tairo: {
- *     panels: [
- *       {
- *         // Unique name of the panel, used to open it
- *         name: 'panel-name',
- *         // The component name of the panel
- *         // It should be registered in the app as a global component
- *         component: { name: 'PanelComponent', props: {} },
- *         // The position of the panel
- *         position: 'left',
- *         // Whether to show an overlay when the panel is open
- *         overlay: false,
- *       },
- *     ],
- *   },
- * })
- * ```
- *
- * @example
- * ```vue
- * <script setup lang="ts">
- * const { open } = usePanels()
- * </script>
- *
- * <template>
- *   <button @click="open('panel-name')">Open panel</button>
- * </template>
- * ```
- */
 export function usePanels() {
-  const app = useAppConfig()
-
+  const panelsItems = [
+    {
+      name: 'language',
+      position: 'right',
+      component: 'DemoPanelLanguage'
+    },
+    {
+      name: 'activity',
+      position: 'right',
+      component: 'DemoPanelActivity'
+    },
+    {
+      name: 'search',
+      position: 'left',
+      component: 'DemoPanelSearch'
+    },
+    {
+      name: 'task',
+      position: 'right',
+      component: 'DemoPanelTask'
+    },
+    {
+      name: 'account',
+      position: 'right',
+      component: 'DemoPanelAccount',
+      size: 'md'
+    },
+    {
+      name: 'card',
+      position: 'right',
+      component: 'DemoPanelCard'
+    },
+    {
+      name: 'invest',
+      position: 'right',
+      component: 'DemoPanelInvest',
+      size: 'md'
+    }
+  ];
   const panels = computed<Panel[]>(
     () =>
-      app.roppa?.panels?.map(panel => ({
+      panelsItems.map(panel => ({
         ...panel,
         size: (panel as any).size ?? 'sm',
         position: (panel as any).position ?? 'left',
-        overlay: (panel as any).overlay ?? true,
-      })) ?? [],
+        overlay: (panel as any).overlay ?? true
+      })) ?? []
   )
 
   const currentName = useState('panels-current-name', () => '')
@@ -73,7 +74,7 @@ export function usePanels() {
       return undefined
     }
 
-    return panels.value.find(panel => panel.name === currentName.value)
+    return panels.value.find((panel: { name: string }) => panel.name === currentName.value)
   })
 
   function open(name: string, props?: Record<string, any>) {
@@ -98,6 +99,6 @@ export function usePanels() {
     currentProps,
     showOverlay,
     open,
-    close,
+    close
   }
 }
