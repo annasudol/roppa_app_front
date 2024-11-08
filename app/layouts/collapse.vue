@@ -12,8 +12,8 @@ const props = withDefaults(
   {
     collapse: true,
     toolbar: true,
-    circularMenu: true,
-  },
+    circularMenu: true
+  }
 )
 
 const app = useAppConfig()
@@ -47,7 +47,7 @@ const mainClass = computed(() => {
   }
 
   const list = [
-    'bg-muted-100 dark:bg-muted-900 relative min-h-screen w-full overflow-x-hidden px-4 transition-all duration-300 xl:px-10',
+    'bg-muted-100 dark:bg-muted-900 relative min-h-screen w-full overflow-x-hidden px-4 transition-all duration-300 xl:px-10'
   ]
 
   if (isOpen.value) {
@@ -87,9 +87,9 @@ const mainClass = computed(() => {
         :class="[
           props.condensed && !props.horizontalScroll && 'w-full',
           !props.condensed && props.horizontalScroll && 'mx-auto w-full',
-          !props.condensed &&
-            !props.horizontalScroll &&
-            'mx-auto w-full max-w-7xl',
+          !props.condensed
+            && !props.horizontalScroll
+            && 'mx-auto w-full max-w-7xl'
         ]"
       >
         <slot name="toolbar">
