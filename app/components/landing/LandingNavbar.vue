@@ -1,8 +1,10 @@
 <script setup lang="ts">
 import RoppaLogo from '../global/RoppaLogo.vue'
 import IconTopMenu from '../global/IconTopMenu.vue'
+import LoginLogoutButton from '../landing/LoginLogoutButton.vue'
 
 const isMobileOpen = ref(false)
+const { loggedIn, user, clear } = useUserSession()
 </script>
 
 <template>
@@ -32,34 +34,11 @@ const isMobileOpen = ref(false)
         ]"
       >
         <IconTopMenu :open="isMobileOpen" />
-        <BaseButton
-          rounded="lg"
-          color="primary"
-          to="/auth/signin"
-          class="w-32 text-nowrap md:hidden"
-          :class="!isMobileOpen && 'hidden'"
-        >
-          Sign in
-          <Icon
-            name="ant-design:login-outlined"
-            class="ms-1 h-4 w-4"
-          />
-        </BaseButton>
+        <LoginLogoutButton :classes="!isMobileOpen ? 'hidden' : 'md:hidden'" />
       </div>
       <div class="flex w-2/3 items-center justify-end gap-4 md:w-1/5">
         <BaseThemeToggle aria-label="Toggle darkmode" />
-        <BaseButton
-          rounded="lg"
-          color="primary"
-          to="/auth/signin"
-          class="w-32 text-nowrap hidden ltablet:flex lg:flex"
-        >
-          Sign in
-          <Icon
-            name="ant-design:login-outlined"
-            class="ms-1 h-4 w-4"
-          />
-        </BaseButton>
+        <LoginLogoutButton classes="hidden md:block" />
         <button
           type="button"
           class="flex items-center justify-center ltablet:hidden lg:hidden"
