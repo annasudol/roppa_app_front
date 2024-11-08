@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { useCollapse } from '~/composables/collapse'
-import TairoCollapseCircularMenu from '~/components/sidenav/TairoCollapseCircularMenu.vue'
-import TairoCollapseNavigation from '~/components/sidenav/TairoCollapseNavigation.vue'
-import TairoCollapseToolbar from '~/components/sidenav/TairoCollapseToolbar.vue'
+import TairoCollapseCircularMenu from '~/components/global/TairoCollapseCircularMenu.vue'
+import TairoCollapseNavigation from '~/components/global/TairoCollapseNavigation.vue'
+import TairoCollapseToolbar from '~/components/global/TairoCollapseToolbar.vue'
 
 const props = withDefaults(
   defineProps<{
@@ -15,7 +15,8 @@ const props = withDefaults(
   {
     collapse: true,
     toolbar: true,
-    circularMenu: true
+    circularMenu: true,
+    condensed: false
   }
 )
 
@@ -51,7 +52,6 @@ const mainClass = computed(() => {
   if (isOpen.value) {
     list.push('lg:max-w-[calc(100%_-_280px)] lg:ms-[280px]')
   }
-
 
   if (props.horizontalScroll) {
     list.push('!pe-0 xl:!pe-0')
