@@ -45,7 +45,7 @@ export function useIconnav() {
     }
   ]
 
-  if(user) {
+  if(user.value?.id) {
     items.push({
       name: 'Dasboard',
       icon: { name: 'material-symbols:dashboard-2-rounded', class: 'w-6 h-6' },
