@@ -1,6 +1,5 @@
 <script setup lang="ts">
 const { user } = useUserSession()
-console.log(user.value, 'user')
 </script>
 
 <template>
@@ -11,7 +10,7 @@ console.log(user.value, 'user')
         class="ltablet:max-w-full flex max-w-[425px] flex-col items-center gap-4 text-center md:flex-row md:text-left lg:max-w-full"
       >
         <BaseAvatar
-          :src="user?.pic"
+          src="/img/avatars/4.svg"
           size="lg"
         />
         <div>

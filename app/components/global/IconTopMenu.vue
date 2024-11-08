@@ -27,7 +27,7 @@ const isMobileOpenClass = ref('flex-row')
           @click="
             () => {
               selectedMenuItem = item,
-              router.push(item.children?.[0]?.to)
+              router.push(item.activePath || '/')
             }
           "
         >

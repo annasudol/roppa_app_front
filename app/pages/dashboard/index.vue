@@ -11,6 +11,7 @@ definePageMeta({
     order: 159
   }
 })
+const { user } = useUserSession()
 </script>
 
 <template>
@@ -32,7 +33,7 @@ definePageMeta({
             lead="tight"
             class="text-muted-800 dark:text-white"
           >
-            <span>Welcome back, Maya</span>
+            <span>Welcome back, {{ user?.name }}</span>
           </BaseHeading>
           <BaseParagraph>
             <span class="text-muted-500">

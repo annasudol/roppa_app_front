@@ -20,7 +20,6 @@ const props = withDefaults(
 const isSearchOpen = useState('search-open', () => false)
 const metaKey = useMetaKey()
 const { menuItems, selectedMenuItem } = useIconnav()
-console.log(menuItems, 'menuItems')
 const router = useRouter()
 </script>
 
@@ -54,6 +53,28 @@ const router = useRouter()
         </div>
         <!-- Menu Items -->
         <div class="ltablet:flex hidden grow justify-center gap-x-6 lg:flex">
+          <button
+            type="button"
+            class="group flex flex-col"
+            @click="
+              () => {
+                // selectedMenuItem = item,
+                // router.push(item.children?.[0]?.to)
+              }
+            "
+          >
+            <div
+              class="text-muted-400 group-hover:bg-muted-100 group-hover:text-muted-600 dark:group-hover:bg-muted-800 dark:group-hover:text-muted-300 relative mx-auto flex size-11 items-center justify-center rounded-xl transition-colors duration-300"
+            >
+              <!-- <Icon
+                  :name="item.icon.name"
+                  :class="item.icon.class"
+                /> -->
+            </div>
+            <p class="text-muted-400 w-full text-center font-sans text-xs">
+              Dahboard
+            </p>
+          </button>
           <div
             v-for="(item, index) in (menuItems as any)"
             :key="index"

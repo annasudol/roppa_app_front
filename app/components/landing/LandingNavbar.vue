@@ -4,8 +4,6 @@ import IconTopMenu from '../global/IconTopMenu.vue'
 import LoginLogoutButton from '../landing/LoginLogoutButton.vue'
 
 const isMobileOpen = ref(false)
-const { loggedIn, user, clear } = useUserSession()
-console.log(user.value, 'user')
 </script>
 
 <template>
@@ -25,7 +23,6 @@ console.log(user.value, 'user')
             class="text-primary-500 group-[&.scrolled]/landing:h-6 group-[&:not(.scrolled)]/landing:h-7 motion-safe:transition-all motion-safe:duration-200"
           />
         </NuxtLink>
-        <ProfileInfo />
       </div>
       <div
         class="ltablet:static ltablet:w-auto ltablet:flex ltablet:flex-row dark:bg-muted-950 ltablet:!bg-transparent ltablet:mx-0 fixed inset-x-0 top-20 mx-auto w-[calc(100%_-_2rem)] items-center justify-center bg-white lg:static lg:mx-0 lg:flex lg:w-auto lg:flex-row lg:!bg-transparent"
@@ -36,7 +33,6 @@ console.log(user.value, 'user')
         ]"
       >
         <IconTopMenu :open="isMobileOpen" />
-        <ProfileInfo />
         <LoginLogoutButton :classes="!isMobileOpen ? 'hidden' : 'md:hidden'" />
       </div>
       <div class="flex w-2/3 items-center justify-end gap-4 md:w-1/5">

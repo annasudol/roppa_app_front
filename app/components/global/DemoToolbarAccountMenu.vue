@@ -1,5 +1,7 @@
 <script setup lang="ts">
-import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
+import { Menu, MenuButton, MenuItems } from '@headlessui/vue'
+
+const { user, clear } = useUserSession()
 </script>
 
 <template>
@@ -51,125 +53,19 @@ import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
               <h6
                 class="font-heading text-muted-800 text-sm font-medium dark:text-white"
               >
-                Maya Rosselini
+                {{ user?.name }}
               </h6>
               <p class="text-muted-400 mb-4 font-sans text-xs">
-                maya@tairo.io
+                {{ user?.email }}
               </p>
-              <BaseButton
-                to="/layouts/profile-edit"
-                rounded="lg"
-                class="w-full"
-                @click.passive="close"
-              >
-                Manage Account
-              </BaseButton>
             </div>
-          </div>
-          <div class="px-6 py-1.5">
-            <MenuItem v-slot="{ active }" as="div">
-              <NuxtLink
-                to="#"
-                class="group flex w-full items-center rounded-md p-2 text-sm transition-colors duration-300"
-                :class="[
-                  active
-                    ? 'bg-muted-100 dark:bg-muted-700 text-primary-500'
-                    : 'text-muted-500',
-                ]"
-                @click.passive="close"
-              >
-                <div
-                  class="relative inline-flex size-9 items-center justify-center rounded-full"
-                >
-                  <img
-                    src="/img/avatars/3.svg"
-                    class="max-w-full rounded-full object-cover shadow-sm dark:border-transparent"
-                    alt=""
-                  >
-                </div>
-                <div class="ms-2">
-                  <h6
-                    class="font-heading text-muted-800 text-xs font-medium leading-none dark:text-white"
-                  >
-                    Mike Miller
-                  </h6>
-                  <p class="text-muted-400 font-sans text-xs">
-                    mike@tairo.io
-                  </p>
-                </div>
-              </NuxtLink>
-            </MenuItem>
-            <MenuItem v-slot="{ active }" as="div">
-              <NuxtLink
-                to="#"
-                class="group flex w-full items-center rounded-md p-2 text-sm transition-colors duration-300"
-                :class="[
-                  active
-                    ? 'bg-muted-100 dark:bg-muted-700 text-primary-500'
-                    : 'text-muted-500',
-                ]"
-                @click.passive="close"
-              >
-                <div
-                  class="relative inline-flex size-9 items-center justify-center rounded-full"
-                >
-                  <img
-                    src="/img/avatars/9.svg"
-                    class="max-w-full rounded-full object-cover shadow-sm dark:border-transparent"
-                    alt=""
-                  >
-                </div>
-                <div class="ms-2">
-                  <h6
-                    class="font-heading text-muted-800 text-xs font-medium leading-none dark:text-white"
-                  >
-                    Claire Baker
-                  </h6>
-                  <p class="text-muted-400 font-sans text-xs">
-                    claire@tairo.io
-                  </p>
-                </div>
-              </NuxtLink>
-            </MenuItem>
-            <MenuItem v-slot="{ active }" as="div">
-              <NuxtLink
-                to="#"
-                class="group flex w-full items-center rounded-md p-2 text-sm transition-colors duration-300"
-                :class="[
-                  active
-                    ? 'bg-muted-100 dark:bg-muted-700 text-primary-500'
-                    : 'text-muted-500',
-                ]"
-                @click.passive="close"
-              >
-                <div
-                  class="relative inline-flex size-9 items-center justify-center rounded-full"
-                >
-                  <img
-                    src="/img/avatars/14.svg"
-                    class="max-w-full rounded-full object-cover shadow-sm dark:border-transparent"
-                    alt=""
-                  >
-                </div>
-                <div class="ms-2">
-                  <h6
-                    class="font-heading text-muted-800 text-xs font-medium leading-none dark:text-white"
-                  >
-                    Alan Baxter
-                  </h6>
-                  <p class="text-muted-400 font-sans text-xs">
-                    alan@tairo.io
-                  </p>
-                </div>
-              </NuxtLink>
-            </MenuItem>
           </div>
 
           <div class="p-6">
             <BaseButton
               rounded="lg"
               class="w-full"
-              @click.passive="close"
+              @click.passive="clear"
             >
               Logout
             </BaseButton>

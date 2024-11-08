@@ -19,7 +19,9 @@ export interface TairoIconnavResolvedConfig {
 }
 
 export function useIconnav() {
-  const route = useRoute()
+  const { user } = useUserSession()
+
+  const route = useRoute();
   const items = [
     {
       name: 'New Design',
@@ -40,9 +42,17 @@ export function useIconnav() {
       icon: { name: 'iconoir:book', class: 'w-6 h-6' },
       activePath: '/about-us',
       children: []
-
     }
   ]
+
+  if(user) {
+    items.push({
+      name: 'Dasboard',
+      icon: { name: 'material-symbols:dashboard-2-rounded', class: 'w-6 h-6' },
+      activePath: '/dashboard',
+      children: []
+    })
+  }
 
   const menuItems = computed(() => {
     return items.map(navigation =>

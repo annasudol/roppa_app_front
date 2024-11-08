@@ -6,8 +6,8 @@ const props = withDefaults(
     account?: any
   }>(),
   {
-    account: undefined,
-  },
+    account: undefined
+  }
 )
 
 const { close } = usePanels()
@@ -23,31 +23,31 @@ function useDemoAreaBalance() {
   const options = {
     chart: {
       zoom: {
-        enabled: false,
+        enabled: false
       },
       toolbar: {
-        show: false,
-      },
+        show: false
+      }
     },
     dataLabels: {
-      enabled: false,
+      enabled: false
     },
     stroke: {
       width: [2, 2, 2],
-      curve: 'smooth',
+      curve: 'smooth'
     },
     colors: [primary.value],
     legend: {
       show: false,
-      position: 'top',
+      position: 'top'
     },
     grid: {
       show: false,
       padding: {
         left: -10,
         right: 0,
-        bottom: 10,
-      },
+        bottom: 10
+      }
     },
     xaxis: {
       type: 'datetime',
@@ -58,29 +58,29 @@ function useDemoAreaBalance() {
         '2022-09-22T03:30:00.000Z',
         '2022-09-23T04:30:00.000Z',
         '2022-09-24T05:30:00.000Z',
-        '2022-09-25T06:30:00.000Z',
-      ],
+        '2022-09-25T06:30:00.000Z'
+      ]
     },
     yaxis: {
       labels: {
         show: false,
-        offsetX: -15,
+        offsetX: -15
       },
       axisBorder: {
-        show: false,
+        show: false
       },
       axisTicks: {
-        show: false,
-      },
+        show: false
+      }
     },
     tooltip: {
       x: {
-        format: 'dd/MM/yy HH:mm',
+        format: 'dd/MM/yy HH:mm'
       },
       y: {
-        formatter: (val: number) => `$${val}`,
-      },
-    },
+        formatter: (val: number) => `$${val}`
+      }
+    }
   }
 
   const series = ref(props.account.history)
@@ -89,7 +89,7 @@ function useDemoAreaBalance() {
     type,
     height,
     options,
-    series,
+    series
   }
 }
 </script>
@@ -111,19 +111,22 @@ function useDemoAreaBalance() {
           Account Details
         </BaseHeading>
 
-        <!--Close button-->
+        <!-- Close button -->
         <button
           type="button"
           class="nui-mask nui-mask-blob hover:bg-muted-100 focus:bg-muted-100 dark:hover:bg-muted-700 dark:focus:bg-muted-700 text-muted-700 dark:text-muted-400 flex size-10 cursor-pointer items-center justify-center outline-transparent transition-colors duration-300"
           @click="close"
         >
-          <Icon name="lucide:arrow-right" class="size-4" />
+          <Icon
+            name="lucide:arrow-right"
+            class="size-4"
+          />
         </button>
       </div>
       <div
         class="nui-slimscroll relative h-[calc(100dvh_-_5rem)] w-full overflow-y-auto overflow-x-hidden p-6"
       >
-        <!--Info-->
+        <!-- Info -->
         <div class="flex items-center justify-between">
           <div>
             <BaseHeading
@@ -134,13 +137,19 @@ function useDemoAreaBalance() {
             >
               {{ props.account.type }} {{ props.account.number }}
             </BaseHeading>
-            <BaseParagraph size="sm" class="text-muted-400">
+            <BaseParagraph
+              size="sm"
+              class="text-muted-400"
+            >
               {{ account.owner.name }}
             </BaseParagraph>
           </div>
-          <!--Balance-->
+          <!-- Balance -->
           <div class="py-6 pe-4 text-end">
-            <BaseParagraph size="xs" class="text-muted-400 mb-1">
+            <BaseParagraph
+              size="xs"
+              class="text-muted-400 mb-1"
+            >
               Account balance
             </BaseParagraph>
             <BaseParagraph
@@ -152,17 +161,23 @@ function useDemoAreaBalance() {
             </BaseParagraph>
           </div>
         </div>
-        <!--Content-->
+        <!-- Content -->
         <div class="space-y-4 py-6 pe-4">
-          <!--Item-->
+          <!-- Item -->
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-2">
               <div class="bg-muted-500 size-2 rounded-full" />
-              <BaseParagraph size="sm" class="text-muted-700 dark:text-muted-400">
+              <BaseParagraph
+                size="sm"
+                class="text-muted-700 dark:text-muted-400"
+              >
                 Routing number
               </BaseParagraph>
               <BaseText data-nui-tooltip="The wire routing number">
-                <Icon name="lucide:help-circle" class="text-muted-400 size-3" />
+                <Icon
+                  name="lucide:help-circle"
+                  class="text-muted-400 size-3"
+                />
               </BaseText>
             </div>
             <BaseText
@@ -173,15 +188,21 @@ function useDemoAreaBalance() {
               {{ account.details.routingNumber }}
             </BaseText>
           </div>
-          <!--Item-->
+          <!-- Item -->
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-2">
               <div class="bg-muted-500 size-2 rounded-full" />
-              <BaseParagraph size="sm" class="text-muted-700 dark:text-muted-400">
+              <BaseParagraph
+                size="sm"
+                class="text-muted-700 dark:text-muted-400"
+              >
                 Account number
               </BaseParagraph>
               <BaseText data-nui-tooltip="Your full account number">
-                <Icon name="lucide:help-circle" class="text-muted-400 size-3" />
+                <Icon
+                  name="lucide:help-circle"
+                  class="text-muted-400 size-3"
+                />
               </BaseText>
             </div>
             <BaseText
@@ -192,15 +213,21 @@ function useDemoAreaBalance() {
               {{ account.details.accountNumber }}
             </BaseText>
           </div>
-          <!--Item-->
+          <!-- Item -->
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-2">
               <div class="bg-muted-300 size-2 rounded-full" />
-              <BaseParagraph size="sm" class="text-muted-700 dark:text-muted-400">
+              <BaseParagraph
+                size="sm"
+                class="text-muted-700 dark:text-muted-400"
+              >
                 IBAN
               </BaseParagraph>
               <BaseText data-nui-tooltip="The international identifier">
-                <Icon name="lucide:help-circle" class="text-muted-400 size-3" />
+                <Icon
+                  name="lucide:help-circle"
+                  class="text-muted-400 size-3"
+                />
               </BaseText>
             </div>
             <BaseText
@@ -211,11 +238,14 @@ function useDemoAreaBalance() {
               {{ account.details.iban }}
             </BaseText>
           </div>
-          <!--Item-->
+          <!-- Item -->
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-2">
               <div class="bg-muted-200 size-2 rounded-full" />
-              <BaseParagraph size="sm" class="text-muted-700 dark:text-muted-400">
+              <BaseParagraph
+                size="sm"
+                class="text-muted-700 dark:text-muted-400"
+              >
                 Bank code
               </BaseParagraph>
             </div>

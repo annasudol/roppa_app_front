@@ -15,10 +15,10 @@ const { loggedIn, clear } = useUserSession()
       class="w-32 text-nowrap"
       :class="classes"
     >
-      Sign in
+      <span class="ml-3">Sign in</span>
       <Icon
         name="ant-design:login-outlined"
-        class="ms-1 h-4 w-4"
+        class="ms-1 h-4 w-4 relative top-0.5"
       />
     </BaseButton>
     <BaseButton
@@ -29,10 +29,10 @@ const { loggedIn, clear } = useUserSession()
       :class="classes"
       @click="clear"
     >
-      Logout
+      <span>Logout</span>
       <Icon
         name="line-md:logout"
-        class="ms-1 h-4 w-4"
+        class="ms-1 h-4 w-4 relative top-0.5"
       />
     </BaseButton>
   </div>
