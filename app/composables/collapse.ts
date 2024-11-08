@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import type { RouteLocationRaw } from 'vue-router'
 
 export interface TairoCollapseResolvedConfig {
@@ -128,6 +127,6 @@ export function useCollapse() {
     isOpen,
     isMobileOpen,
     header,
-    footer,
+    footer
   }
 }

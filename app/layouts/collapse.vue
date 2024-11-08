@@ -1,8 +1,5 @@
 <script setup lang="ts">
-import { useCollapse } from '~/composables/collapse'
-import TairoCollapseCircularMenu from '~/components/global/TairoCollapseCircularMenu.vue'
-import TairoCollapseNavigation from '~/components/global/TairoCollapseNavigation.vue'
-import TairoCollapseToolbar from '~/components/global/TairoCollapseToolbar.vue'
+import { useCollapse } from '../composables/collapse'
 
 const props = withDefaults(
   defineProps<{
@@ -16,14 +13,18 @@ const props = withDefaults(
     collapse: true,
     toolbar: true,
     circularMenu: true,
-    condensed: false
-  }
+  },
 )
 
 const app = useAppConfig()
 const { isOpen, isMobileOpen, toggle } = useCollapse()
 
-const collapseEnabled = computed(() => true)
+const collapseEnabled = computed(() => {
+  return (
+    (app.roppa?.collapse?.navigation?.enabled as boolean) !== false
+    && props.collapse !== false
+  )
+})
 const toolbarEnabled = computed(() => {
   return (
     app.roppa?.collapse?.toolbar?.enabled as boolean !== false && props.toolbar !== false
@@ -46,11 +47,14 @@ const mainClass = computed(() => {
   }
 
   const list = [
-    'bg-muted-100 dark:bg-muted-900 relative min-h-screen w-full overflow-x-hidden px-4 transition-all duration-300 xl:px-10 lg:max-w-[calc(100%_-_80px)] lg:ms-[80px]'
+    'bg-muted-100 dark:bg-muted-900 relative min-h-screen w-full overflow-x-hidden px-4 transition-all duration-300 xl:px-10',
   ]
 
   if (isOpen.value) {
     list.push('lg:max-w-[calc(100%_-_280px)] lg:ms-[280px]')
+  }
+  else {
+    list.push('lg:max-w-[calc(100%_-_80px)] lg:ms-[80px]')
   }
 
   if (props.horizontalScroll) {
@@ -81,11 +85,11 @@ const mainClass = computed(() => {
     <div :class="mainClass">
       <div
         :class="[
-          // props.condensed && !props.horizontalScroll && 'w-full',
-          // !props.condensed && props.horizontalScroll && 'mx-auto w-full',
-          // !props.condensed
-          //   && !props.horizontalScroll
-          //   && 'mx-auto w-full max-w-7xl'
+          props.condensed && !props.horizontalScroll && 'w-full',
+          !props.condensed && props.horizontalScroll && 'mx-auto w-full',
+          !props.condensed &&
+            !props.horizontalScroll &&
+            'mx-auto w-full max-w-7xl',
         ]"
       >
         <slot name="toolbar">
