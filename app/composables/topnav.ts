@@ -83,7 +83,7 @@ export function useTopnav() {
   const isMobileOpen = useState('collapse-open', () => false)
 
   const activeMenuItem = computed(() => {
-    return menuItems.value?.find((item) => {
+    return menuItems.value?.find((item: { activePath: string, to: { toString: () => string } }) => {
       if (item.activePath) {
         return route.path.startsWith(item.activePath)
       }
@@ -97,7 +97,7 @@ export function useTopnav() {
     'topnav-selected-menu-item',
     () => activeMenuItem.value
   )
-  watch(activeMenuItem, (item) => {
+  watch(activeMenuItem, (item: any) => {
     selectedMenuItem.value = item
   })
 
