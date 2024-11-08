@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import TairoCollapseBurger from './TairoCollapseBurger.vue'
+import CollapseBurger from '../global/CollapseBurger.vue'
 
 const props = withDefaults(
   defineProps<{
@@ -25,7 +25,7 @@ const showNavBurger = computed(() => {
     class="relative mb-5 flex h-16 items-center gap-2"
     :class="props.horizontalScroll && 'pe-4 xl:pe-10'"
   >
-    <TairoCollapseBurger
+    <CollapseBurger
       v-if="showNavBurger"
       class="-ms-3"
     />
