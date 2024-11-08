@@ -2,6 +2,12 @@
 import { Menu, MenuButton, MenuItems } from '@headlessui/vue'
 
 const { user, clear } = useUserSession()
+const router = useRouter()
+
+const handleLogout = () => {
+  clear()
+  router.push('/')
+}
 </script>
 
 <template>
@@ -55,17 +61,29 @@ const { user, clear } = useUserSession()
               >
                 {{ user?.name }}
               </h6>
-              <p class="text-muted-400 mb-4 font-sans text-xs">
+              <p class="text-muted-400 font-sans text-xs">
                 {{ user?.email }}
               </p>
             </div>
           </div>
 
-          <div class="p-6">
+          <div class="px-6 py-4">
+            <BaseLink
+              to="/dashboard"
+              class="text-primary-500 flex justify-center items-center mb-4"
+              @click="close"
+            >
+              <Icon
+                name="material-symbols:settings-b-roll-rounded"
+                size="16"
+                class="mr-2"
+              />
+              Account
+            </BaseLink>
             <BaseButton
               rounded="lg"
               class="w-full"
-              @click.passive="clear"
+              @click.passive="handleLogout"
             >
               Logout
             </BaseButton>

@@ -8,7 +8,7 @@ const app = useAppConfig()
  */
 useHead({
   title: () => route.meta?.title ?? '',
-  titleTemplate: (titleChunk: string) => {
+  titleTemplate: (titleChunk?: string) => {
     return titleChunk
       ? `${app.roppa?.title} - ${titleChunk}`
       : `${app.roppa?.title}`

@@ -3,6 +3,8 @@ import RoppaLogo from '../global/RoppaLogo.vue'
 import IconTopMenu from '../global/IconTopMenu.vue'
 import LoginLogoutButton from '../landing/LoginLogoutButton.vue'
 
+const { user } = useUserSession()
+
 const isMobileOpen = ref(false)
 </script>
 
@@ -36,7 +38,9 @@ const isMobileOpen = ref(false)
         <LoginLogoutButton :classes="!isMobileOpen ? 'hidden' : 'md:hidden'" />
       </div>
       <div class="flex w-2/3 items-center justify-end gap-4 md:w-1/5">
-        <DemoToolbarAccountMenu />
+        <DemoToolbarAccountMenu
+          v-if="user"
+        />
         <BaseThemeToggle aria-label="Toggle darkmode" />
         <LoginLogoutButton classes="hidden md:block" />
         <button
